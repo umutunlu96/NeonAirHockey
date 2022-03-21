@@ -77,10 +77,11 @@ public class Hockey : MonoBehaviour
             Vector2 directionMax = Vector2.ClampMagnitude(direction, 1.25f); // Clamp distance
 
             float distance = Vector2.Distance(dragStartPos, mausePos);
-            if (distance > 2f)
+
+            if (distance > 4f)
                 return;
             else
-                distance = 2f;
+                distance = 4f;
 
             lineRenderer.SetPosition(0, transform.position);
             lineRenderer.SetPosition(1, mausePos);
