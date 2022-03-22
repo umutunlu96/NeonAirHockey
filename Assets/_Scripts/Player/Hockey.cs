@@ -8,8 +8,20 @@ public class Hockey : MonoBehaviour
     //public AudioClip obsHit;
     //public AudioClip finishHit;
 
+    public int tryAmount;
+
+    public float power = 5;
+    public float lineRendererMaxRange = 3;
+
+    public bool setMaxSpeed = false;
+    public float maxSpeed = 5;
+
+    private GameManager gamaManager;
+
+
     private GameObject shootMaxCircle;
     private LineRenderer lineRenderer;
+    private Vector3 startPos, endPos;
 
     private Vector2 direction;
     private Vector2 dragStartPos;
@@ -17,7 +29,7 @@ public class Hockey : MonoBehaviour
     private Rigidbody2D rigidBody;
     private GameObject colorChilds;
 
-    public float power = 5;
+
 
     private enum BallState
     {
@@ -38,20 +50,26 @@ public class Hockey : MonoBehaviour
 
         currentState = BallState.Idle;
         colorChilds = transform.GetChild(0).gameObject;
+
+        gamaManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+
     }
 
     void Update()
     {
-        if (rigidBody.velocity.magnitude <= .1f && currentState == BallState.Moving)
+        if (rigidBody.velocity.magnitude <= .3f && currentState == BallState.Moving)
         {
             currentState = BallState.Idle;
         }
 
-        if (rigidBody.velocity.magnitude > .1f && currentState == BallState.Idle)
+        else if (rigidBody.velocity.magnitude > .1f && currentState == BallState.Idle)
         {
             currentState = BallState.Moving;
         }
 
+        if (rigidBody.velocity.magnitude < .15f)
+            rigidBody.velocity *= rigidBody.velocity * .95f;
+        print(rigidBody.velocity.magnitude);
     }
 
     private void OnMouseDown()
@@ -73,18 +91,10 @@ public class Hockey : MonoBehaviour
         {
             Vector2 mausePos = Camera.main.ScreenToWorldPoint(Input.mousePosition); //Vector2 Mause Input
             direction = dragStartPos - mausePos; //Distance between mause and object
+            //print("Direction Mag: " + direction.magnitude);
 
-            Vector2 directionMax = Vector2.ClampMagnitude(direction, 1.25f); // Clamp distance
 
-            float distance = Vector2.Distance(dragStartPos, mausePos);
-
-            if (distance > 4f)
-                return;
-            else
-                distance = 4f;
-
-            lineRenderer.SetPosition(0, transform.position);
-            lineRenderer.SetPosition(1, mausePos);
+            LineRenderer(mausePos);
         }
     }
 
@@ -94,12 +104,35 @@ public class Hockey : MonoBehaviour
         {
             shootMaxCircle.SetActive(false);
             lineRenderer.enabled = false;
-            rigidBody.AddForce(direction * power, ForceMode2D.Impulse);
-            print(direction.magnitude * power);
-        }
 
+            if (setMaxSpeed)
+            {
+                Vector2 directionMax = Vector2.ClampMagnitude(direction, maxSpeed); // Clamp distance
+                rigidBody.AddForce(directionMax * power, ForceMode2D.Impulse);
+                print("Shoot Power Max: " + directionMax.magnitude * power);
+                tryAmount--;
+            }
+            else
+            {
+                rigidBody.AddForce(direction * power, ForceMode2D.Impulse);
+                print("Shoot Power: " + direction.magnitude * power);
+                tryAmount--;
+            }
+        }
     }
 
+    private void LineRenderer(Vector2 MausePos)
+    {
+        Vector3 startPos = dragStartPos;
+        Vector3 endPos = MausePos;
+
+        Vector3 dir = endPos - startPos;
+        float dist = Mathf.Clamp(Vector3.Distance(startPos, endPos), 0, lineRendererMaxRange);
+        endPos = startPos + (dir.normalized * dist);
+
+        lineRenderer.SetPosition(0, startPos);
+        lineRenderer.SetPosition(1, endPos);
+    }
 
     private void OnTriggerEnter2D(Collider2D target)
     {
@@ -147,6 +180,9 @@ public class Hockey : MonoBehaviour
 
         if (target.gameObject.tag == "WallBlack")
         {
+            //SoundManager.instance.PlaySoundFX(wallHit, .2f);
+
+
             GetComponent<Rigidbody2D>().AddForce(new Vector2((direction.x > 0 ? 1 : -1), 
                 direction.y > 0 ? 1f : -1f), ForceMode2D.Impulse);
         }
@@ -158,17 +194,8 @@ public class Hockey : MonoBehaviour
             rigidBody.velocity = new Vector2(0, 0);
             currentState = BallState.Finish;
             target.tag = "Untagged";
+            gamaManager.CheckFinishState();
             //Win game UI
         }
     }
-
-
-
-
-
-
-
-
-
-
 }

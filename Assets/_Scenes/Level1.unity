@@ -1735,6 +1735,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   power: 5
+  lineRendererMaxRange: 3
+  setMaxSpeed: 1
+  maxSpeed: 5
 --- !u!120 &1264356098
 LineRenderer:
   m_ObjectHideFlags: 0

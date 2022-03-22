@@ -7,8 +7,6 @@ public class GameManager : MonoBehaviour
 {
     public int shootAmount;
 
-    private int enemyCount = 1;
-
     [HideInInspector]
     public bool gameOver;
 
@@ -32,20 +30,29 @@ public class GameManager : MonoBehaviour
 
         CloseApplication();
 
+
+        if (!gameOver && FindObjectOfType<Hockey>().tryAmount <= 0)   //GameOverCondition
+        {
+            //GameUI.instance.GameOverScreen();
+            gameOver = true;
+        }
+
     }
 
-    public void CheckEnemyCount()
+    public void CheckFinishState()
     {
-        enemyCount = GameObject.FindGameObjectsWithTag("Finish").Length;
-
-        if (enemyCount <= 0)
+        if (GameObject.FindGameObjectWithTag("Finish") == null)
         {
             GameUI.instance.WinScreen();
+
             if (levelNumber == SceneManager.GetActiveScene().buildIndex)
-            {
                 PlayerPrefs.SetInt("Level", levelNumber + 1);
-            }
         }
+    }
+
+    public void CheckBallCount()
+    {
+
     }
 
     IEnumerator FadeIn(int sceneIndex)

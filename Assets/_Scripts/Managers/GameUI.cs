@@ -9,6 +9,7 @@ public class GameUI : MonoBehaviour
 
     private GameManager gameManager;
     private int startBB;
+    private Canvas canvas;
 
     [Header("Win Screen")]
     public Text goodJobText;
@@ -24,11 +25,13 @@ public class GameUI : MonoBehaviour
     {
         instance = this;
         gameManager = FindObjectOfType<GameManager>();
+        canvas = transform.GetComponent<Canvas>();
     }
 
     void Start()
     {
         startBB = gameManager.shootAmount;
+        canvas.worldCamera = Camera.main;
     }
 
     public void GameOverScreen()
