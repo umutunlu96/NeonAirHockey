@@ -43,10 +43,10 @@ public class GameManager : MonoBehaviour
     {
         if (GameObject.FindGameObjectWithTag("Finish") == null)
         {
-            GameUI.instance.WinScreen();
+            //GameUI.instance.WinScreen();
 
-            if (levelNumber == SceneManager.GetActiveScene().buildIndex)
-                PlayerPrefs.SetInt("Level", levelNumber + 1);
+            //if (levelNumber == SceneManager.GetActiveScene().buildIndex)
+            //    PlayerPrefs.SetInt("Level", levelNumber + 1);
         }
     }
 

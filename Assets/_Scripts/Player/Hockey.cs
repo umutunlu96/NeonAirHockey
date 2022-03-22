@@ -74,7 +74,7 @@ public class Hockey : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (currentState == BallState.Idle)
+        if (currentState == BallState.Idle || currentState == BallState.Moving)
         {
             shootMaxCircle.SetActive(true);
 
@@ -87,8 +87,10 @@ public class Hockey : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        if (currentState == BallState.Idle)
+        if (currentState == BallState.Idle || currentState == BallState.Moving)
         {
+            dragStartPos = this.gameObject.transform.position;
+
             Vector2 mausePos = Camera.main.ScreenToWorldPoint(Input.mousePosition); //Vector2 Mause Input
             direction = dragStartPos - mausePos; //Distance between mause and object
             //print("Direction Mag: " + direction.magnitude);
@@ -100,7 +102,7 @@ public class Hockey : MonoBehaviour
 
     private void OnMouseUp()
     {
-        if (currentState == BallState.Idle)
+        if (currentState == BallState.Idle|| currentState == BallState.Moving)
         {
             shootMaxCircle.SetActive(false);
             lineRenderer.enabled = false;
