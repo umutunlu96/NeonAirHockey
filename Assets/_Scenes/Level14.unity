@@ -986,6 +986,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8332629252116150807, guid: 6dacf4b19e9e30645b51920c2b6238d6, type: 3}
+      propertyPath: moveAmount
+      value: 1.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 8332629252116150807, guid: 6dacf4b19e9e30645b51920c2b6238d6, type: 3}
       propertyPath: randomSpeed
       value: 1
       objectReference: {fileID: 0}
@@ -1948,6 +1952,10 @@ PrefabInstance:
     - target: {fileID: 8332629252116150807, guid: 6dacf4b19e9e30645b51920c2b6238d6, type: 3}
       propertyPath: goBase
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8332629252116150807, guid: 6dacf4b19e9e30645b51920c2b6238d6, type: 3}
+      propertyPath: moveAmount
+      value: 1.28
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6dacf4b19e9e30645b51920c2b6238d6, type: 3}
