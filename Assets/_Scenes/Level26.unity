@@ -151,10 +151,6 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3818804754643055254, guid: ff303ceac1659214e837ab16213f9b75, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3818804754643055254, guid: ff303ceac1659214e837ab16213f9b75, type: 3}
       propertyPath: m_TagString
       value: ObsBlue
       objectReference: {fileID: 0}
@@ -509,7 +505,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4566165841321884005, guid: 6d9a7fc1b67d04242b35f07360652264, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4566165841321884007, guid: 6d9a7fc1b67d04242b35f07360652264, type: 3}
       propertyPath: m_RootOrder
@@ -1111,7 +1107,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5982935702185021806, guid: d5f18a15a5a8a6544bd09a1cc5bddadc, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5f18a15a5a8a6544bd09a1cc5bddadc, type: 3}
@@ -1719,10 +1715,6 @@ PrefabInstance:
     - target: {fileID: 3818804754643055254, guid: ff303ceac1659214e837ab16213f9b75, type: 3}
       propertyPath: m_Layer
       value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 3818804754643055254, guid: ff303ceac1659214e837ab16213f9b75, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3818804754643055254, guid: ff303ceac1659214e837ab16213f9b75, type: 3}
       propertyPath: m_TagString
