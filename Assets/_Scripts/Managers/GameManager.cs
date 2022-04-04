@@ -43,11 +43,20 @@ public class GameManager : MonoBehaviour
     {
         if (GameObject.FindGameObjectWithTag("Finish") == null)
         {
+
+            StartCoroutine(NextLevel());
+
             //GameUI.instance.WinScreen();
 
             //if (levelNumber == SceneManager.GetActiveScene().buildIndex)
             //    PlayerPrefs.SetInt("Level", levelNumber + 1);
         }
+    }
+
+    IEnumerator NextLevel()
+    {
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex + 1));
     }
 
     public void CheckBallCount()
@@ -68,11 +77,11 @@ public class GameManager : MonoBehaviour
         //StartCoroutine(FadeIn(SceneManager.GetActiveScene().buildIndex));
     }
 
-    public void NextLevel()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        //StartCoroutine(FadeIn(SceneManager.GetActiveScene().buildIndex + 1));
-    }
+    //public void NextLevel()
+    //{
+    //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    //    //StartCoroutine(FadeIn(SceneManager.GetActiveScene().buildIndex + 1));
+    //}
 
     public void Exit()
     {

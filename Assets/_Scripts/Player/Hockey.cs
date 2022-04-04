@@ -67,7 +67,7 @@ public class Hockey : MonoBehaviour
             currentState = BallState.Moving;
         }
 
-        if (rigidBody.velocity.magnitude < .15f)
+        if (rigidBody.velocity.magnitude < .15f && currentState != BallState.Finish)
             rigidBody.velocity *= rigidBody.velocity * .95f;
         print(rigidBody.velocity.magnitude);
     }
