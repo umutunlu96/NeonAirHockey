@@ -48,8 +48,8 @@ public class GameManager : MonoBehaviour
 
             //GameUI.instance.WinScreen();
 
-            //if (levelNumber == SceneManager.GetActiveScene().buildIndex)
-            //    PlayerPrefs.SetInt("Level", levelNumber + 1);
+            if (levelNumber == SceneManager.GetActiveScene().buildIndex)
+                PlayerPrefs.SetInt("Level", levelNumber + 1);
         }
     }
 
