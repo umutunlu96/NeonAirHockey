@@ -15,6 +15,7 @@ public class Level : MonoBehaviour
     {
         levelReq = transform.GetSiblingIndex() + 1;
         levelNumber = transform.GetChild(0).gameObject.GetComponent<Text>();
+        print(PlayerPrefs.GetInt("Level"));
     }
 
 

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class MainMenuUI : MonoBehaviour
@@ -9,10 +11,35 @@ public class MainMenuUI : MonoBehaviour
     public GameObject levelSelection;
     public int maxLevel;
     private bool isEscape;
+    public GameObject DifficultyTogles;
+
+    #region PVP Settings
+
+    public Text pvpTimeText;
+    private int pvpTime;
+
+    private int PvpTime
+    {
+        get { return pvpTime; }
+        set
+        {
+            pvpTime = value;
+            if (value > 5)
+            {
+                pvpTime = 5;
+            }
+        }
+    }
+
+    #endregion
+
+
+
 
     private void Start()
     {
         PlayerPrefs.SetInt("AdShowCount", 0);
+        DifficultyTogles.transform.GetChild((int)AiSettings.Difficulty).GetComponent<Toggle>().isOn = true;
     }
 
     private void Update()
@@ -48,7 +75,18 @@ public class MainMenuUI : MonoBehaviour
         if (PlayerPrefs.GetInt("Level") >= maxLevel)
             SceneManager.LoadScene(maxLevel);
         else
-            SceneManager.LoadScene(PlayerPrefs.GetInt("Level", 1));
+            SceneManager.LoadScene(PlayerPrefs.GetInt("Level", 1) + 2);
+    }
+
+    public void PlayPlayerVsPlayer()
+    {
+        SceneManager.LoadScene("PlayerVsPlayer");
+    }
+
+
+    public void PlayVsAi()
+    {
+        SceneManager.LoadScene("PlayerVsAi");
     }
 
     private void closeLevelSelect()
@@ -62,4 +100,47 @@ public class MainMenuUI : MonoBehaviour
         play.SetActive(false);
         levelSelection.SetActive(true);
     }
+
+    #region Difficulty
+    public void SetEasyDifficulty(bool isOn)
+    {
+        if (isOn)
+        {
+            AiSettings.Difficulty = AiSettings.Difficulties.Easy;
+        }
+    }
+
+    public void SetMediumDifficulty(bool isOn)
+    {
+        if (isOn)
+        {
+            AiSettings.Difficulty = AiSettings.Difficulties.Medium;
+        }
+    }
+
+    public void SetHardDifficulty(bool isOn)
+    {
+        if (isOn)
+        {
+            AiSettings.Difficulty = AiSettings.Difficulties.Hard;
+        }
+    }
+
+    #endregion
+
+
+    #region PVP Settings
+
+    private void IncreasePvPTime()
+    {
+        pvpTime = Int32.Parse(pvpTimeText.text);
+    }
+
+
+    private void DecreasePvPTime()
+    {
+
+    }
+    #endregion
+
 }

@@ -69,7 +69,7 @@ public class Hockey : MonoBehaviour
 
         if (rigidBody.velocity.magnitude < .15f && currentState != BallState.Finish)
             rigidBody.velocity *= rigidBody.velocity * .95f;
-        print(rigidBody.velocity.magnitude);
+        //print(rigidBody.velocity.magnitude);
     }
 
     private void OnMouseDown()
