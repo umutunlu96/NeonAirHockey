@@ -9,26 +9,14 @@ EditorBuildSettings:
     path: Assets/_Scenes/Menu/MainMenu.unity
     guid: f1d8842ddcccfc742a8bbf262159ec4b
   - enabled: 1
-    path: Assets/_Scenes/PvP/PlayervsAi.unity
+    path: Assets/_Scenes/PvP/PlayerVsAi.unity
     guid: a52d31ae69a9eaa47a98cdba50017929
   - enabled: 1
-    path: Assets/_Scenes/PvP/PlayervsPlayer.unity
+    path: Assets/_Scenes/PvP/PlayerVsPlayer.unity
     guid: 04678a57ed898da418a55c69192f2274
   - enabled: 1
     path: Assets/_Scenes/Level1.unity
     guid: 7ccbdfb1a06666743a5055bf0382b703
-  - enabled: 1
-    path: Assets/_Scenes/Level2.unity
-    guid: b88e168b1a0a5a246a5f19ac0d152b8d
-  - enabled: 1
-    path: Assets/_Scenes/Level3.unity
-    guid: f066976f6d860ae439b689e9e928cd0c
-  - enabled: 1
-    path: Assets/_Scenes/Level4.unity
-    guid: 49c4abbc459e96f44affbbb7c6af8954
-  - enabled: 1
-    path: Assets/_Scenes/Level5.unity
-    guid: d5e840e530e1cd145a97a0a6ae4d1520
   - enabled: 1
     path: Assets/_Scenes/Level6.unity
     guid: 4e7c7f36e16dd2446adce9a9ef218765
