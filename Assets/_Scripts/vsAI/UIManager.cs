@@ -24,12 +24,15 @@ public class UIManager : MonoBehaviour
     [Header("CanvasRestart")]
     public GameObject WinTxt;
     public GameObject LoseTxt;
+    public GameObject DrawTxt;
 
     [Header("Audio")]
     public AudioClip wonGame;
     public AudioClip loseGame;
+    public AudioClip drawGame;
 
     private ScoreScript scoreScript;
+    private GameController gameController;
 
     public List<IResettable> ResetableGameObjects = new List<IResettable>();
 
@@ -38,27 +41,37 @@ public class UIManager : MonoBehaviour
     private void Start()
     {
         scoreScript = GameObject.FindObjectOfType<ScoreScript>();
+        gameController = GameObject.FindObjectOfType<GameController>();
     }
 
-    public void ShowRestartCanvas(bool didAIWin)
+    public void ShowRestartCanvas(float whoWin)
     {
         Time.timeScale = 0;
         CanvasGame.SetActive(false);
         CanvasRestart.SetActive(true);
 
-        if (didAIWin)
-        {
-            PlayLoseSound();
-            WinTxt.SetActive(false);
-            LoseTxt.SetActive(true);
-        }
-        else
+        if (whoWin == 1)
         {
             PlayWinSound();
             WinTxt.SetActive(true);
             LoseTxt.SetActive(false);
-        }
+            DrawTxt.SetActive(false);
 
+        }
+        else if(whoWin == 2)
+        {
+            PlayLoseSound();
+            WinTxt.SetActive(false);
+            LoseTxt.SetActive(true);
+            DrawTxt.SetActive(false);
+        }
+        else if (whoWin == 0)
+        {
+            PlayWinSound();
+            WinTxt.SetActive(false);
+            LoseTxt.SetActive(false);
+            DrawTxt.SetActive(true);
+        }
     }
 
     private void PlayWinSound()
@@ -70,7 +83,10 @@ public class UIManager : MonoBehaviour
     {
         SoundManager.instance.PlaySoundFX(loseGame, .5f);
     }
-
+    private void PlayDrawSound()
+    {
+        SoundManager.instance.PlaySoundFX(drawGame, .5f);
+    }
 
     public void RestartGame()
     {
@@ -79,6 +95,7 @@ public class UIManager : MonoBehaviour
         CanvasRestart.SetActive(false);
 
         scoreScript.ResetScore();
+        gameController.ResetGame();
 
         foreach (var obj in ResetableGameObjects)
         {

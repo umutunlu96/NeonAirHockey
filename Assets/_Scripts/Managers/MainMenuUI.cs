@@ -13,29 +13,6 @@ public class MainMenuUI : MonoBehaviour
     private bool isEscape;
     public GameObject DifficultyTogles;
 
-    #region PVP Settings
-
-    public Text pvpTimeText;
-    private int pvpTime;
-
-    private int PvpTime
-    {
-        get { return pvpTime; }
-        set
-        {
-            pvpTime = value;
-            if (value > 5)
-            {
-                pvpTime = 5;
-            }
-        }
-    }
-
-    #endregion
-
-
-
-
     private void Start()
     {
         PlayerPrefs.SetInt("AdShowCount", 0);
@@ -131,16 +108,7 @@ public class MainMenuUI : MonoBehaviour
 
     #region PVP Settings
 
-    private void IncreasePvPTime()
-    {
-        pvpTime = Int32.Parse(pvpTimeText.text);
-    }
 
-
-    private void DecreasePvPTime()
-    {
-
-    }
     #endregion
 
 }

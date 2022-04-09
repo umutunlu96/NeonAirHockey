@@ -1017,7 +1017,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -150, y: 100}
+  m_AnchoredPosition: {x: -200, y: 100}
   m_SizeDelta: {x: 200, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &577803814
@@ -1414,8 +1414,10 @@ MonoBehaviour:
   CanvasRestart: {fileID: 1465974785}
   WinTxt: {fileID: 1110936871}
   LoseTxt: {fileID: 368374579}
+  DrawTxt: {fileID: 0}
   wonGame: {fileID: 8300000, guid: 7478151cf36724a7dada558f746c3633, type: 3}
   loseGame: {fileID: 8300000, guid: 4b4dd7245f6104c8c8eb07ccf6b386ed, type: 3}
+  drawGame: {fileID: 0}
 --- !u!1 &881493575
 GameObject:
   m_ObjectHideFlags: 0
@@ -1712,7 +1714,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -150, y: -100}
+  m_AnchoredPosition: {x: -200, y: -100}
   m_SizeDelta: {x: 200, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1042626981
@@ -2348,8 +2350,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1476707583}
   - component: {fileID: 1476707584}
-  - component: {fileID: 1476707585}
   - component: {fileID: 1476707586}
+  - component: {fileID: 1476707585}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2385,7 +2387,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AiScoreText: {fileID: 577803814}
   PlayerScoreText: {fileID: 1042626981}
-  maxScore: 2
 --- !u!114 &1476707585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2411,7 +2412,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d2f6fff7aa7380499b201fa08cf7240, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameEnd: 0
 --- !u!1 &1558016287
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,24 +11,11 @@ public class ScoreScript : MonoBehaviour
 
     public Text AiScoreText, PlayerScoreText;
 
-    public int maxScore;
+    private int maxScore;
     private UIManager uiManager;
 
     #region Scores
     private int aiScore, playerScore;
-
-    public int AiScore 
-    {
-        get { return aiScore; }
-        set 
-        {
-            aiScore = value; 
-            if (value == maxScore)
-            {
-                StartCoroutine(DelayRestartCanvas(true));
-            }
-        }
-    }
 
     public int PlayerScore
     {
@@ -38,15 +25,26 @@ public class ScoreScript : MonoBehaviour
             playerScore = value;
             if (value == maxScore)
             {
-                StartCoroutine(DelayRestartCanvas(false));
+                StartCoroutine(DelayRestartCanvas(1));
             }
         }
     }
-
-    public IEnumerator DelayRestartCanvas(bool isAiWin)
+    public int AiScore 
+    {
+        get { return aiScore; }
+        set 
+        {
+            aiScore = value; 
+            if (value == maxScore)
+            {
+                StartCoroutine(DelayRestartCanvas(2));
+            }
+        }
+    }
+    public IEnumerator DelayRestartCanvas(float whoWin)
     {
         yield return new WaitForSeconds(1);
-        uiManager.ShowRestartCanvas(isAiWin);
+        uiManager.ShowRestartCanvas(whoWin);
     }
 
     #endregion
@@ -54,6 +52,7 @@ public class ScoreScript : MonoBehaviour
     private void Awake()
     {
         uiManager = GameObject.FindObjectOfType<UIManager>();
+        maxScore = PlayerPrefs.GetInt("PvPGoalAmount",5);
     }
 
     public void Increment(Score whichScore)
