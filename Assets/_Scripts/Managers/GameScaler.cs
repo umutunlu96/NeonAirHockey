@@ -11,19 +11,21 @@ public class GameScaler : MonoBehaviour
 
     void Update()
     {
-        float screenRatio = (float)Screen.width / (float)Screen.height;
-        float spriteRatio = background.bounds.size.x / background.bounds.size.y;
+        float screenRatioX = (float)Screen.width;
+        float screenRatioY = (float)Screen.height;
 
-        if (screenRatio != spriteRatio)
+        float spriteRatioX = background.bounds.size.x;
+        float spriteRatioY = background.bounds.size.y;
+
+        if (spriteRatioX != screenRatioX || spriteRatioY != screenRatioY)
         {
-            float differenceInSize = spriteRatio / screenRatio;
-            background.gameObject.transform.localScale = new Vector3(1 * differenceInSize, 1 * differenceInSize, 1);
-            stuff.transform.localScale = new Vector3(1 * differenceInSize, 1 * differenceInSize, 1);
-            hockey.transform.localScale = new Vector3(1 * differenceInSize, 1 * differenceInSize, 1);
+            float ratioX = spriteRatioX / screenRatioX;
+            float ratioY = spriteRatioY / screenRatioY;
+            float scaleFaxtor = ratioY / ratioX;
 
+            //background.gameObject.transform.localScale = new Vector3(scaleFaxtor, 1, 1);
+            stuff.transform.localScale = new Vector3(scaleFaxtor, 1, 1);
+            hockey.transform.localScale = new Vector3(.25f+scaleFaxtor, .25f+scaleFaxtor, 1);
         }
-
-
-
     }
 }
