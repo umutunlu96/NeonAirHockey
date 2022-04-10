@@ -59,7 +59,7 @@ Transform:
   m_GameObject: {fileID: 8955483700483980123}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.14, y: -3.77, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8955483700159188229}
   m_Father: {fileID: 0}
@@ -99,7 +99,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.5760081, y: -0.013114452}
+  m_Offset: {x: -1.6236628, y: 0.03152728}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -110,7 +110,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.4879842, y: 9.589454}
+  m_Size: {x: 3.3926747, y: 7.509146}
   m_EdgeRadius: 0
 --- !u!1 &8955483701213667596
 GameObject:
@@ -159,10 +159,10 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 7
+  m_Intensity: 4
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
-  m_LightCookieSprite: {fileID: 21300000, guid: 7ea418b7482b62045a1b50a817bf2c55, type: 3}
+  m_LightCookieSprite: {fileID: 21300000, guid: 6b66fdf18d06de64fa73c7a287efb284, type: 3}
   m_UseNormalMap: 0
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 0
@@ -231,10 +231,10 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 7
+  m_Intensity: 4
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
-  m_LightCookieSprite: {fileID: 21300000, guid: 453f768f3aaafc143ab8991505b59796, type: 3}
+  m_LightCookieSprite: {fileID: 21300000, guid: 6b66fdf18d06de64fa73c7a287efb284, type: 3}
   m_UseNormalMap: 0
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 0

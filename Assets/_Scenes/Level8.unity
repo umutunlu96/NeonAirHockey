@@ -1756,6 +1756,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObsRed
       objectReference: {fileID: 0}
+    - target: {fileID: 5996888741835035504, guid: 7691157d276929345812b559f8619f15, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5996888741835035518, guid: 7691157d276929345812b559f8619f15, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1861,6 +1865,10 @@ PrefabInstance:
     - target: {fileID: 162416745352601415, guid: 949cc89445e8a5448a718d404ae70146, type: 3}
       propertyPath: m_Name
       value: ObsGreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 162416745352601415, guid: 949cc89445e8a5448a718d404ae70146, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 949cc89445e8a5448a718d404ae70146, type: 3}
@@ -2005,6 +2013,10 @@ PrefabInstance:
     - target: {fileID: 8066964049002606942, guid: 87ceede084b955a4eb4f975c61bee502, type: 3}
       propertyPath: m_Name
       value: ObsBlue
+      objectReference: {fileID: 0}
+    - target: {fileID: 8066964049002606942, guid: 87ceede084b955a4eb4f975c61bee502, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87ceede084b955a4eb4f975c61bee502, type: 3}

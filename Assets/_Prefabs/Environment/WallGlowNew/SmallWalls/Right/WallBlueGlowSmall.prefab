@@ -82,7 +82,7 @@ MonoBehaviour:
   m_Intensity: 4
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
-  m_LightCookieSprite: {fileID: 21300000, guid: 347e34cf210fef240b6efc6d0dc3ca82, type: 3}
+  m_LightCookieSprite: {fileID: 21300000, guid: 5cc4af893c6315d4f8f49d14b384619e, type: 3}
   m_UseNormalMap: 0
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 0
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Intensity: 4
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
-  m_LightCookieSprite: {fileID: 21300000, guid: 347e34cf210fef240b6efc6d0dc3ca82, type: 3}
+  m_LightCookieSprite: {fileID: 21300000, guid: 5cc4af893c6315d4f8f49d14b384619e, type: 3}
   m_UseNormalMap: 0
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 0
@@ -203,7 +203,7 @@ Transform:
   m_GameObject: {fileID: 4526572645776385116}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 2.75, y: 7.42, z: 0}
-  m_LocalScale: {x: -0.8, y: 0.3, z: 1}
+  m_LocalScale: {x: -0.7, y: 1, z: 1}
   m_Children:
   - {fileID: 4033162002502442374}
   m_Father: {fileID: 0}
@@ -243,7 +243,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.5760081, y: -0.013114452}
+  m_Offset: {x: -4.13932, y: 0.025988817}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -254,5 +254,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.4879842, y: 9.589454}
+  m_Size: {x: 8.614707, y: 2.8375964}
   m_EdgeRadius: 0
