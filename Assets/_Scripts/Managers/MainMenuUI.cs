@@ -7,10 +7,17 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuUI : MonoBehaviour
 {
-    public GameObject play;
-    public GameObject levelSelection;
+    [Header("Settings")]
     public int maxLevel;
     private bool isEscape;
+
+    [Header("Panels")]
+    public GameObject main;
+    public GameObject levelSelection;
+    public GameObject championship;
+    public GameObject playerVsAi;
+    public GameObject playerVsPlayer;
+    public GameObject about;
     public GameObject DifficultyTogles;
 
     private void Start()
@@ -35,7 +42,7 @@ public class MainMenuUI : MonoBehaviour
             else
             {
                 isEscape = true;
-                closeLevelSelect();
+                closePanelGoMain();
                 if (!IsInvoking("DisableDoubleClick"))
                     Invoke("DisableDoubleClick", 0.3f);
             }
@@ -66,16 +73,19 @@ public class MainMenuUI : MonoBehaviour
         SceneManager.LoadScene("PlayerVsAi");
     }
 
-    private void closeLevelSelect()
+    private void closePanelGoMain()
     {
-        play.SetActive(true);
+        main.SetActive(true);
         levelSelection.SetActive(false);
+        championship.SetActive(false);
+        playerVsAi.SetActive(false);
+        playerVsPlayer.SetActive(false);
+        about.SetActive(false);
     }
 
-    public void SelectLevel()
+    public void MoreApps()
     {
-        play.SetActive(false);
-        levelSelection.SetActive(true);
+        Application.OpenURL("https://play.google.com/store/apps/dev?id=8187470632350050639&hl=tr&gl=US");
     }
 
     #region Difficulty
@@ -102,12 +112,6 @@ public class MainMenuUI : MonoBehaviour
             AiSettings.Difficulty = AiSettings.Difficulties.Hard;
         }
     }
-
-    #endregion
-
-
-    #region PVP Settings
-
 
     #endregion
 
