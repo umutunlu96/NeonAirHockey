@@ -23,7 +23,6 @@ public class GameScaler : MonoBehaviour
             float ratioY = spriteRatioY / screenRatioY;
             float scaleFaxtor = ratioY / ratioX;
 
-            //background.gameObject.transform.localScale = new Vector3(scaleFaxtor, 1, 1);
             stuff.transform.localScale = new Vector3(scaleFaxtor, 1, 1);
             hockey.transform.localScale = new Vector3(.25f+scaleFaxtor, .25f+scaleFaxtor, 1);
         }
