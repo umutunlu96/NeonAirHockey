@@ -53,6 +53,11 @@ public class Hockey : MonoBehaviour
 
     }
 
+    private void Start()
+    {
+        lineRenderer.enabled = false;
+    }
+
     void Update()
     {
         if (rigidBody.velocity.magnitude <= .3f && currentState == BallState.Moving)
