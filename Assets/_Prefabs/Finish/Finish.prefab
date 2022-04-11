@@ -46,6 +46,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FinishYellow
       objectReference: {fileID: 0}
+    - target: {fileID: 1230699725138784842, guid: 04f0f1e4e0d38824d90aba79bd1af499, type: 3}
+      propertyPath: m_TagString
+      value: Kale
+      objectReference: {fileID: 0}
     - target: {fileID: 1230699725138784843, guid: 04f0f1e4e0d38824d90aba79bd1af499, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -152,6 +156,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FinishBlue
       objectReference: {fileID: 0}
+    - target: {fileID: 3235742440923866607, guid: e9dbf1645721b3142870972693d8b289, type: 3}
+      propertyPath: m_TagString
+      value: Kale
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9dbf1645721b3142870972693d8b289, type: 3}
 --- !u!4 &789755644528615675 stripped
@@ -169,6 +177,10 @@ PrefabInstance:
     - target: {fileID: 4704239258998604770, guid: 7bb380cf06125fc44b364c7dad4a4f05, type: 3}
       propertyPath: m_Name
       value: FinishGreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 4704239258998604770, guid: 7bb380cf06125fc44b364c7dad4a4f05, type: 3}
+      propertyPath: m_TagString
+      value: Kale
       objectReference: {fileID: 0}
     - target: {fileID: 4704239258998604773, guid: 7bb380cf06125fc44b364c7dad4a4f05, type: 3}
       propertyPath: m_RootOrder
@@ -275,6 +287,10 @@ PrefabInstance:
     - target: {fileID: 4914428795960876476, guid: d42fbc410e025ff418c314e988b84454, type: 3}
       propertyPath: m_Name
       value: FinishRed
+      objectReference: {fileID: 0}
+    - target: {fileID: 4914428795960876476, guid: d42fbc410e025ff418c314e988b84454, type: 3}
+      propertyPath: m_TagString
+      value: Kale
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d42fbc410e025ff418c314e988b84454, type: 3}

@@ -684,6 +684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wallHit: {fileID: 8300000, guid: ffb159a21c8a04135a5616979c828fab, type: 3}
+  finishHit: {fileID: 8300000, guid: 7bd6b897eb5ca4b7d88a205c4a51640c, type: 3}
   power: 5
   lineRendererMaxRange: 3
   setMaxSpeed: 0

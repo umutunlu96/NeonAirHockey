@@ -7,7 +7,7 @@ public class Hockey : MonoBehaviour
 {
     public AudioClip wallHit;
     //public AudioClip obsHit;
-    //public AudioClip finishHit;
+    public AudioClip finishHit;
 
     public float power = 5;
     public float lineRendererMaxRange = 3;
@@ -158,6 +158,8 @@ public class Hockey : MonoBehaviour
 
             SetActiveChildren(0);
             StartCoroutine(LightEffect(colorChilds.transform.GetChild(0).gameObject, 5, 15, .3f));
+            StartCoroutine(LightEffect(target.transform.GetChild(0).GetChild(0).gameObject, 5, 15, .25f));
+            StartCoroutine(LightEffect(target.transform.GetChild(0).GetChild(1).gameObject, 5, 15, .25f));
         }
 
         if (target.gameObject.tag == "WallGreen")
@@ -166,6 +168,8 @@ public class Hockey : MonoBehaviour
 
             SetActiveChildren(1);
             StartCoroutine(LightEffect(colorChilds.transform.GetChild(1).gameObject, 5, 15, .3f));
+            StartCoroutine(LightEffect(target.transform.GetChild(0).GetChild(0).gameObject, 5, 15, .25f));
+            StartCoroutine(LightEffect(target.transform.GetChild(0).GetChild(1).gameObject, 5, 15, .25f));
         }
 
         if (target.gameObject.tag == "WallBlue")
@@ -174,6 +178,8 @@ public class Hockey : MonoBehaviour
 
             SetActiveChildren(2);
             StartCoroutine(LightEffect(colorChilds.transform.GetChild(2).gameObject, 5, 15, .3f));
+            StartCoroutine(LightEffect(target.transform.GetChild(0).GetChild(0).gameObject, 5, 15, .25f));
+            StartCoroutine(LightEffect(target.transform.GetChild(0).GetChild(1).gameObject, 5, 15, .25f));
         }
 
         if (target.gameObject.tag == "WallYellow")
@@ -182,20 +188,13 @@ public class Hockey : MonoBehaviour
 
             SetActiveChildren(3);
             StartCoroutine(LightEffect(colorChilds.transform.GetChild(3).gameObject, 5, 15, .3f));
-        }
-
-        if (target.gameObject.tag == "WallBlack")
-        {
-            SoundManager.instance.PlaySoundFX(wallHit, .2f);
-
-
-            GetComponent<Rigidbody2D>().AddForce(new Vector2((direction.x > 0 ? 1 : -1), 
-                direction.y > 0 ? 1f : -1f), ForceMode2D.Impulse);
+            StartCoroutine(LightEffect(target.transform.GetChild(0).GetChild(0).gameObject, 5, 15, .25f));
+            StartCoroutine(LightEffect(target.transform.GetChild(0).GetChild(1).gameObject, 5, 15, .25f));
         }
 
         if (target.tag == "Finish")
         {
-            //SoundManager.instance.PlaySoundFX(finishHit, .2f);
+            SoundManager.instance.PlaySoundFX(finishHit, .2f);
 
             rigidBody.velocity = new Vector2(0, 0);
             currentState = BallState.Finish;
@@ -207,9 +206,6 @@ public class Hockey : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //Solda topun y si duvarin x i ustte tam tersi
-        //rotasyon
-
         switch (collision.gameObject.tag)
         {
             case "WallRed":
@@ -260,13 +256,20 @@ public class Hockey : MonoBehaviour
             particle2.GetComponent<ParticleSystem>().Play();
         }
 
-        if (collision.transform.position.y >= 5)
+        if (collision.transform.position.y >= 5 && collision.gameObject.tag != "Kale")
         {
             Vector3 insPosY = new Vector3(transform.position.x, collision.transform.position.y, 1);
             GameObject particle2 = Instantiate(particleSys, insPosY, Quaternion.Euler(new Vector3(0, 0, 180)));
             particle2.GetComponent<ParticleSystem>().Play();
         }
 
+        if (collision.gameObject.tag == "Kale")
+        {
+            SoundManager.instance.PlaySoundFX(wallHit, .2f);
+            StartCoroutine(LightEffect(colorChilds.transform.GetChild(3).gameObject, 5, 15, .3f));
+            StartCoroutine(LightEffect(collision.transform.GetChild(0).gameObject, 5, 15, .25f));
+            StartCoroutine(LightEffect(collision.transform.GetChild(1).gameObject, 5, 15, .25f));
+        }
     }
 
     private void SetActiveChildren(int childIndex)
@@ -278,16 +281,10 @@ public class Hockey : MonoBehaviour
         colorChilds.transform.GetChild(childIndex).gameObject.SetActive(true);
     }
 
-
     IEnumerator LightEffect (GameObject obj, float intensityValue, float maxIntensityValue, float delay)
     {
         obj.GetComponent<Light2D>().intensity = maxIntensityValue;
         yield return new WaitForSeconds(delay);
         obj.GetComponent<Light2D>().intensity = intensityValue;
-    }
-
-    private void InstantiateParticleEffect(Transform hockey, Transform wall)
-    {
-
     }
 }

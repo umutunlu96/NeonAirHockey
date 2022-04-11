@@ -17,6 +17,7 @@ TagManager:
   - Ball
   - AIGoal
   - PlayerGoal
+  - Kale
   layers:
   - Default
   - TransparentFX
