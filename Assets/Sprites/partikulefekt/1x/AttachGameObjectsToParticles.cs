@@ -41,5 +41,7 @@ public class AttachGameObjectsToParticles : MonoBehaviour
                 m_Instances[i].SetActive(false);
             }
         }
+
+        Destroy(this.gameObject, 1f);
     }
 }

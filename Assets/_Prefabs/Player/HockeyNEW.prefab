@@ -238,7 +238,7 @@ Transform:
   m_GameObject: {fileID: 8518825257433186328}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children: []
   m_Father: {fileID: 8518825257767552706}
   m_RootOrder: 1
@@ -688,10 +688,10 @@ MonoBehaviour:
   lineRendererMaxRange: 3
   setMaxSpeed: 0
   maxSpeed: 5
-  redParticleSystem: {fileID: 7175941115724418973, guid: 30dde206bb0e59b4d8b0b9fa89477f50, type: 3}
-  greenParticleSystem: {fileID: 3872427644099107731, guid: f8573158d13c7e04d94584da37edaefa, type: 3}
-  blueParticleSystem: {fileID: 5493797416916028675, guid: 0935165fa84d71d409cf12d7dcf480c1, type: 3}
-  yellowParticleSystem: {fileID: 689051161938424810, guid: 18467422379643947908e295181ef497, type: 3}
+  redParticleSystem: {fileID: 3508021055102156376, guid: 702e89fe06c2e5b4dba5703e0eef9304, type: 3}
+  greenParticleSystem: {fileID: 7133424829404630849, guid: a6b388e2d15a5ed4eb9f9850a4c20155, type: 3}
+  blueParticleSystem: {fileID: 772904414395456499, guid: 32f170f1be59a96458ea261baba232cb, type: 3}
+  yellowParticleSystem: {fileID: 9174231502608633905, guid: ba41e0a1d48375a48a787d08552487ca, type: 3}
 --- !u!1 &8518825257963848431
 GameObject:
   m_ObjectHideFlags: 0

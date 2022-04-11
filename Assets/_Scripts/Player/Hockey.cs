@@ -29,11 +29,18 @@ public class Hockey : MonoBehaviour
     private GameObject colorChilds;
 
     [Header("Particle System")]
+    [Header("Top")]
     [SerializeField] private GameObject redParticleSystem;
     [SerializeField] private GameObject greenParticleSystem;
     [SerializeField] private GameObject blueParticleSystem;
     [SerializeField] private GameObject yellowParticleSystem;
+    [Header("Bottom")]
 
+    [Header("Right")]
+
+    [Header("Left")]
+
+    private GameObject particleSys;
 
     private enum BallState
     {
@@ -202,10 +209,64 @@ public class Hockey : MonoBehaviour
     {
         //Solda topun y si duvarin x i ustte tam tersi
         //rotasyon
-        GameObject particle = Instantiate(redParticleSystem, (collision.transform.position + transform.position)/2, Quaternion.identity);
 
-        particle.transform.localScale = new Vector3(collision.transform.localScale.x, collision.transform.localScale.y, 1);
-        particle.GetComponent<ParticleSystem>().Play();
+        switch (collision.gameObject.tag)
+        {
+            case "WallRed":
+                particleSys = redParticleSystem;
+                break;
+            case "WallGreen":
+                particleSys = greenParticleSystem;
+                break;
+            case "WallBlue":
+                particleSys = blueParticleSystem;
+                break;
+            case "WallYellow":
+                particleSys = yellowParticleSystem;
+                break;
+            case "ObsRed":
+                particleSys = redParticleSystem;
+                break;
+            case "ObsGreen":
+                particleSys = greenParticleSystem;
+                break;
+            case "ObsBlue":
+                particleSys = blueParticleSystem;
+                break;
+            case "ObsYellow":
+                particleSys = yellowParticleSystem;
+                break;
+        }
+
+        if (collision.transform.position.x <= -3)
+        {
+            Vector3 insPosX = new Vector3(collision.transform.position.x,transform.position.y,1);
+            GameObject particle = Instantiate(particleSys, insPosX, Quaternion.Euler(new Vector3(0, 0, -90)));
+            particle.GetComponent<ParticleSystem>().Play();
+        }
+
+        if (collision.transform.position.x >= 3)
+        {
+            Vector3 insPosX = new Vector3(collision.transform.position.x, transform.position.y, 1);
+            GameObject particle = Instantiate(particleSys, insPosX, Quaternion.Euler(new Vector3(0, 0, 90)));
+            particle.GetComponent<ParticleSystem>().Play();
+        }
+
+
+        if (collision.transform.position.y <= -5)
+        {
+            Vector3 insPosY = new Vector3(transform.position.x, collision.transform.position.y, 1);
+            GameObject particle2 = Instantiate(particleSys, insPosY, Quaternion.identity);
+            particle2.GetComponent<ParticleSystem>().Play();
+        }
+
+        if (collision.transform.position.y >= 5)
+        {
+            Vector3 insPosY = new Vector3(transform.position.x, collision.transform.position.y, 1);
+            GameObject particle2 = Instantiate(particleSys, insPosY, Quaternion.Euler(new Vector3(0, 0, 180)));
+            particle2.GetComponent<ParticleSystem>().Play();
+        }
+
     }
 
     private void SetActiveChildren(int childIndex)
