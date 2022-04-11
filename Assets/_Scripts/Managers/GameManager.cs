@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public int shootAmount;
-
     [HideInInspector]
     public bool gameOver;
 
@@ -16,11 +14,15 @@ public class GameManager : MonoBehaviour
 
     private bool isEscape;
 
+    public bool isVibrating;
 
+    private GameUI gameUI;
 
     void Awake()
     {
         levelNumber = PlayerPrefs.GetInt("Level", 1);
+        isVibrating = PlayerPrefs.GetInt("Vibrate", 1) == 1;
+        gameUI = FindObjectOfType<GameUI>();
 
         //fadeAnim = GameObject.Find("Fade").GetComponent<Animator>();
     }
@@ -31,7 +33,7 @@ public class GameManager : MonoBehaviour
         CloseApplication();
 
 
-        if (!gameOver && FindObjectOfType<Hockey>().tryAmount <= 0)   //GameOverCondition
+        if (!gameOver /*&& FindObjectOfType<Hockey>().tryAmount <= 0*/)   //GameOverCondition
         {
             //GameUI.instance.GameOverScreen();
             gameOver = true;
@@ -57,11 +59,6 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex + 1));
-    }
-
-    public void CheckBallCount()
-    {
-
     }
 
     IEnumerator FadeIn(int sceneIndex)
@@ -100,6 +97,7 @@ public class GameManager : MonoBehaviour
             }
             else
             {
+                gameUI.PausedScreen();
                 isEscape = true;
                 if (!IsInvoking("DisableDoubleClick"))
                     Invoke("DisableDoubleClick", 0.3f);

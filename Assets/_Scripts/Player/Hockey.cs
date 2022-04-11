@@ -8,8 +8,6 @@ public class Hockey : MonoBehaviour
     //public AudioClip obsHit;
     //public AudioClip finishHit;
 
-    public int tryAmount;
-
     public float power = 5;
     public float lineRendererMaxRange = 3;
 
@@ -112,13 +110,11 @@ public class Hockey : MonoBehaviour
                 Vector2 directionMax = Vector2.ClampMagnitude(direction, maxSpeed); // Clamp distance
                 rigidBody.AddForce(directionMax * power, ForceMode2D.Impulse);
                 print("Shoot Power Max: " + directionMax.magnitude * power);
-                tryAmount--;
             }
             else
             {
                 rigidBody.AddForce(direction * power, ForceMode2D.Impulse);
                 print("Shoot Power: " + direction.magnitude * power);
-                tryAmount--;
             }
         }
     }

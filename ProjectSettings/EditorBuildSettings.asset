@@ -5,33 +5,45 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/_Scenes/Menu/MainMenu Glow.unity
+    guid: c009031f19f7ad74f9eb20a23437363c
   - enabled: 1
     path: Assets/_Scenes/PvP/PlayerVsAi.unity
     guid: a52d31ae69a9eaa47a98cdba50017929
   - enabled: 1
     path: Assets/_Scenes/PvP/PlayerVsPlayer.unity
     guid: 04678a57ed898da418a55c69192f2274
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/_Scenes/Level1.unity
+    guid: ed0b7e3f10b546346a5861e7f323f0f3
+  - enabled: 1
+    path: Assets/_Scenes/Level2.unity
+    guid: 779987a49c0cd8a44b59dae36e15ba8a
+  - enabled: 1
+    path: Assets/_Scenes/Level3.unity
+    guid: 88029b1c41dddd2408382b677a1dfc28
+  - enabled: 1
+    path: Assets/_Scenes/Level4.unity
+    guid: c7b183d7cbf11914bb32a6ebb1e63058
+  - enabled: 1
+    path: Assets/_Scenes/Level5.unity
+    guid: 4add339dd5f74784a8c44f1e6923c573
+  - enabled: 1
+    path: Assets/_Scenes/Level6.unity
+    guid: 01ed5a986642f8e4babc1e4738aa820e
+  - enabled: 1
+    path: Assets/_Scenes/Level7.unity
+    guid: 320f32f1406fc4d45987129bbcbf1bbf
+  - enabled: 1
+    path: Assets/_Scenes/Level8.unity
+    guid: e8a01ee3077d7d049ab5c8729887acff
+  - enabled: 1
+    path: Assets/_Scenes/Level9.unity
+    guid: 8bd531bfc75ec934d9510116f2bd35ac
+  - enabled: 1
+    path: Assets/_Scenes/Level10.unity
+    guid: 6b816b1152fee6943ab53ccc24945779
   - enabled: 1
     path: Assets/_Scenes/Level11.unity
     guid: d5cf2d30b7edca345b3a136a9c6c8692
@@ -152,4 +164,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/Level50.unity
     guid: 79ebcb80fba601c40bfef14d5196a0a2
+  - enabled: 1
+    path: Assets/_Scenes/Level1 Umut.unity
+    guid: b6af3706381025645ac4dc75cf421695
   m_configObjects: {}

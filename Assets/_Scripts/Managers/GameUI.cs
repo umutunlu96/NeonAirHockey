@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameUI : MonoBehaviour
 {
@@ -11,15 +12,21 @@ public class GameUI : MonoBehaviour
     private int startBB;
     private Canvas canvas;
 
+    [Header("PausedMenu")]
+    public GameObject PausedMenu;
+    public Image soundOff;
+    public Image vibrateOff;
+
     [Header("Win Screen")]
-    public Text goodJobText;
     public GameObject winPanel;
+    public Text goodJobText;
     public Image star1, star2, star3;
     public Sprite shineStar, darkStar;
 
     [Header("Game Over")]
     public GameObject gameOverPanel;
 
+    private bool isMuted;
 
     void Awake()
     {
@@ -30,8 +37,11 @@ public class GameUI : MonoBehaviour
 
     void Start()
     {
-        startBB = gameManager.shootAmount;
         canvas.worldCamera = Camera.main;
+        isMuted = PlayerPrefs.GetInt("Muted") == 1;
+        SoundManager.instance.audioSource.mute = isMuted;
+        soundOff.gameObject.SetActive(isMuted);
+        vibrateOff.gameObject.SetActive(gameManager.isVibrating);
     }
 
     public void GameOverScreen()
@@ -43,26 +53,64 @@ public class GameUI : MonoBehaviour
     {
         winPanel.SetActive(true);
 
-        if (gameManager.shootAmount >= startBB)
-        {
-            goodJobText.text = "FANTASTIC!";
-            StartCoroutine(Stars(3));
-        }
-        else if (gameManager.shootAmount >= startBB - (gameManager.shootAmount / 2))
-        {
-            goodJobText.text = "AWESOME!";
-            StartCoroutine(Stars(2));
-        }
-        else if (gameManager.shootAmount > 0)
-        {
-            goodJobText.text = "WELL DONE!";
-            StartCoroutine(Stars(1));
-        }
-        else
-        {
-            goodJobText.text = "GOOD!";
-            StartCoroutine(Stars(0));
-        }
+        //if (gameManager.shootAmount >= startBB)
+        //{
+        //    goodJobText.text = "FANTASTIC!";
+        //    StartCoroutine(Stars(3));
+        //}
+        //else if (gameManager.shootAmount >= startBB - (gameManager.shootAmount / 2))
+        //{
+        //    goodJobText.text = "AWESOME!";
+        //    StartCoroutine(Stars(2));
+        //}
+        //else if (gameManager.shootAmount > 0)
+        //{
+        //    goodJobText.text = "WELL DONE!";
+        //    StartCoroutine(Stars(1));
+        //}
+        //else
+        //{
+        //    goodJobText.text = "GOOD!";
+        //    StartCoroutine(Stars(0));
+        //}
+    }
+
+    public void PausedScreen()
+    {
+        Time.timeScale = 0;
+        PausedMenu.SetActive(true);
+    }
+
+    public void Resume()
+    {
+        Time.timeScale = 1;
+        PausedMenu.SetActive(false);
+    }
+
+    public void GoToMainMenu()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("MainMenu");
+    }
+    public void Restart()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void MuteToggle()
+    {
+        isMuted = !isMuted;
+        SoundManager.instance.audioSource.mute = isMuted;
+        soundOff.gameObject.SetActive(isMuted);
+        PlayerPrefs.SetInt("Muted", isMuted ? 1 : 0);
+    }
+
+    public void VibrationToggle()
+    {
+        gameManager.isVibrating = !gameManager.isVibrating;
+        vibrateOff.gameObject.SetActive(gameManager.isVibrating);
+        PlayerPrefs.SetInt("Vibrate", gameManager.isVibrating ? 1 : 0);
     }
 
     private IEnumerator Stars(int shineNumber)
