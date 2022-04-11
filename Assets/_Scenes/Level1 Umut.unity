@@ -2573,6 +2573,10 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8518825257433186329, guid: 3e97958f788f28c47bc3d0a1457b5d0f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8518825257433186330, guid: 3e97958f788f28c47bc3d0a1457b5d0f, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -2665,6 +2669,10 @@ PrefabInstance:
       propertyPath: yellowParticleSystem
       value: 
       objectReference: {fileID: 9174231502608633905, guid: ba41e0a1d48375a48a787d08552487ca, type: 3}
+    - target: {fileID: 8518825257767552830, guid: 3e97958f788f28c47bc3d0a1457b5d0f, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 8518825257963848426, guid: 3e97958f788f28c47bc3d0a1457b5d0f, type: 3}
       propertyPath: m_Radius
       value: 0.35

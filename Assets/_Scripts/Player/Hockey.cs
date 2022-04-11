@@ -150,7 +150,7 @@ public class Hockey : MonoBehaviour
             SoundManager.instance.PlaySoundFX(wallHit, .2f);
 
             SetActiveChildren(0);
-            StartCoroutine(LightEffect(colorChilds.transform.GetChild(1).gameObject, 5, 15, .15f));
+            StartCoroutine(LightEffect(colorChilds.transform.GetChild(0).gameObject, 5, 15, .3f));
         }
 
         if (target.gameObject.tag == "WallGreen")
@@ -158,7 +158,7 @@ public class Hockey : MonoBehaviour
             SoundManager.instance.PlaySoundFX(wallHit, .2f);
 
             SetActiveChildren(1);
-            StartCoroutine(LightEffect(colorChilds.transform.GetChild(1).gameObject, 5, 15, .15f));
+            StartCoroutine(LightEffect(colorChilds.transform.GetChild(1).gameObject, 5, 15, .3f));
         }
 
         if (target.gameObject.tag == "WallBlue")
@@ -166,7 +166,7 @@ public class Hockey : MonoBehaviour
             SoundManager.instance.PlaySoundFX(wallHit, .2f);
 
             SetActiveChildren(2);
-            StartCoroutine(LightEffect(colorChilds.transform.GetChild(2).gameObject, 5, 15, .15f));
+            StartCoroutine(LightEffect(colorChilds.transform.GetChild(2).gameObject, 5, 15, .3f));
         }
 
         if (target.gameObject.tag == "WallYellow")
@@ -174,7 +174,7 @@ public class Hockey : MonoBehaviour
             SoundManager.instance.PlaySoundFX(wallHit, .2f);
 
             SetActiveChildren(3);
-            StartCoroutine(LightEffect(colorChilds.transform.GetChild(3).gameObject, 5, 15, .15f));
+            StartCoroutine(LightEffect(colorChilds.transform.GetChild(3).gameObject, 5, 15, .3f));
         }
 
         if (target.gameObject.tag == "WallBlack")
