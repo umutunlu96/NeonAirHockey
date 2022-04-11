@@ -99,7 +99,7 @@ MonoBehaviour:
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 5
-  m_LightVolumeOpacity: 0
+  m_LightVolumeOpacity: 0.05
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 21300000, guid: 2abd1afd38493ad46b7f0971d97dc235, type: 3}
   m_UseNormalMap: 0
@@ -188,7 +188,7 @@ MonoBehaviour:
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 5
-  m_LightVolumeOpacity: 0
+  m_LightVolumeOpacity: 0.05
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 21300000, guid: 1a2fa408150208c47b0e63cd2116d80d, type: 3}
   m_UseNormalMap: 0
@@ -359,7 +359,7 @@ MonoBehaviour:
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 5
-  m_LightVolumeOpacity: 0
+  m_LightVolumeOpacity: 0.05
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 21300000, guid: 72dd2f3f6c80ec749bbc04664542f231, type: 3}
   m_UseNormalMap: 0
@@ -413,7 +413,7 @@ Transform:
   m_GameObject: {fileID: 8518825257767552704}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -3, z: 0}
-  m_LocalScale: {x: 1.0705128, y: 1.0705128, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 8518825256046089857}
   - {fileID: 8518825257433186330}
@@ -440,7 +440,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &8518825257767552828
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -450,7 +450,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 8518825257767552704}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: b2b8148bf058be44ab988c1c11131538, type: 2}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -683,11 +683,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37d53a2118bcc5446b291835cab17917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tryAmount: 0
+  wallHit: {fileID: 8300000, guid: ffb159a21c8a04135a5616979c828fab, type: 3}
   power: 5
   lineRendererMaxRange: 3
   setMaxSpeed: 0
   maxSpeed: 5
+  redParticleSystem: {fileID: 7175941115724418973, guid: 30dde206bb0e59b4d8b0b9fa89477f50, type: 3}
+  greenParticleSystem: {fileID: 3872427644099107731, guid: f8573158d13c7e04d94584da37edaefa, type: 3}
+  blueParticleSystem: {fileID: 5493797416916028675, guid: 0935165fa84d71d409cf12d7dcf480c1, type: 3}
+  yellowParticleSystem: {fileID: 689051161938424810, guid: 18467422379643947908e295181ef497, type: 3}
 --- !u!1 &8518825257963848431
 GameObject:
   m_ObjectHideFlags: 0
@@ -753,7 +757,7 @@ MonoBehaviour:
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 5
-  m_LightVolumeOpacity: 0
+  m_LightVolumeOpacity: 0.05
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 21300000, guid: bf79715e037ec154e99cdfce2b753746, type: 3}
   m_UseNormalMap: 0

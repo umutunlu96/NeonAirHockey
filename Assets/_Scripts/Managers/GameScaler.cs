@@ -8,7 +8,7 @@ public class GameScaler : MonoBehaviour
     public SpriteRenderer background;
     public GameObject stuff;
     public GameObject hockey;
-
+    [SerializeField] private float hockeyOffset;
     void Update()
     {
         float screenRatioX = (float)Screen.width;
@@ -24,7 +24,7 @@ public class GameScaler : MonoBehaviour
             float scaleFaxtor = ratioY / ratioX;
 
             stuff.transform.localScale = new Vector3(scaleFaxtor, 1, 1);
-            hockey.transform.localScale = new Vector3(.25f+scaleFaxtor, .25f+scaleFaxtor, 1);
+            hockey.transform.localScale = new Vector3(hockeyOffset + scaleFaxtor, hockeyOffset + scaleFaxtor, 1);
         }
     }
 }
