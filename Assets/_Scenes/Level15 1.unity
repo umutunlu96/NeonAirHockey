@@ -1916,7 +1916,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1557515918074411264, guid: 71e0483833dd00d4cafbc1ef473336cd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1557515918074411265, guid: 71e0483833dd00d4cafbc1ef473336cd, type: 3}
       propertyPath: m_RootOrder
@@ -1924,11 +1924,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1557515918074411265, guid: 71e0483833dd00d4cafbc1ef473336cd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1557515918074411265, guid: 71e0483833dd00d4cafbc1ef473336cd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3.01
       objectReference: {fileID: 0}
     - target: {fileID: 1557515918074411265, guid: 71e0483833dd00d4cafbc1ef473336cd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1961,6 +1961,14 @@ PrefabInstance:
     - target: {fileID: 1557515918074411265, guid: 71e0483833dd00d4cafbc1ef473336cd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1557515918074411390, guid: 71e0483833dd00d4cafbc1ef473336cd, type: 3}
+      propertyPath: goBase
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1557515918074411390, guid: 71e0483833dd00d4cafbc1ef473336cd, type: 3}
+      propertyPath: moveSpeed
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71e0483833dd00d4cafbc1ef473336cd, type: 3}
@@ -2304,8 +2312,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2935975295289438422, guid: e9c776de811ddd24b93f01fb92cecbf5, type: 3}
-      propertyPath: moveAmount
+      propertyPath: moveLeft
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2935975295289438422, guid: e9c776de811ddd24b93f01fb92cecbf5, type: 3}
+      propertyPath: moveRight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2935975295289438422, guid: e9c776de811ddd24b93f01fb92cecbf5, type: 3}
+      propertyPath: moveSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2935975295289438422, guid: e9c776de811ddd24b93f01fb92cecbf5, type: 3}
+      propertyPath: moveAmount
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2935975295289438423, guid: e9c776de811ddd24b93f01fb92cecbf5, type: 3}
       propertyPath: m_Name
