@@ -9,8 +9,11 @@ public class GameUI : MonoBehaviour
     public static GameUI instance;
 
     private GameManager gameManager;
-    private int startBB;
     private Canvas canvas;
+
+    [Header("Timer")]
+    public Text timerText;
+    private float timer;
 
     [Header("PausedMenu")]
     public GameObject PausedMenu;
@@ -19,7 +22,7 @@ public class GameUI : MonoBehaviour
 
     [Header("Win Screen")]
     public GameObject winPanel;
-    public Text goodJobText;
+    //public Text goodJobText;
     public Image star1, star2, star3;
     public Sprite shineStar, darkStar;
 
@@ -38,40 +41,69 @@ public class GameUI : MonoBehaviour
     void Start()
     {
         canvas.worldCamera = Camera.main;
+        timer = gameManager.timer;
         
         soundOff.gameObject.SetActive(PlayerPrefs.GetInt("Muted") == 1);
         vibrateOff.gameObject.SetActive(PlayerPrefs.GetInt("Vibrate", 1) == 1);
     }
 
+    private void Update()
+    {
+        UpdateTimerText();
+    }
+
+
+
+    private void UpdateTimerText()
+    {
+        timerText.text = gameManager.timer.ToString("0.0");
+        if (gameManager.timer >= timer * 2 / 3)
+        {
+            timerText.color = Color.green;
+        }
+        else if (gameManager.timer < timer * 2 / 3 && gameManager.timer >= timer / 3)
+        {
+            timerText.color = Color.green + Color.red;
+        }
+        else if (gameManager.timer <= timer * 1 / 3)
+        {
+            timerText.color = Color.red;
+        }
+    }
+
     public void GameOverScreen()
     {
+        Time.timeScale = 0;
         gameOverPanel.SetActive(true);
+        GameObject.FindObjectOfType<Hockey>().gameObject.SetActive(false);
     }
 
     public void WinScreen()
     {
+        //Time.timeScale = 0;
         winPanel.SetActive(true);
+        GameObject.FindObjectOfType<Hockey>().gameObject.SetActive(false);
 
-        //if (gameManager.shootAmount >= startBB)
-        //{
-        //    goodJobText.text = "FANTASTIC!";
-        //    StartCoroutine(Stars(3));
-        //}
-        //else if (gameManager.shootAmount >= startBB - (gameManager.shootAmount / 2))
-        //{
-        //    goodJobText.text = "AWESOME!";
-        //    StartCoroutine(Stars(2));
-        //}
-        //else if (gameManager.shootAmount > 0)
-        //{
-        //    goodJobText.text = "WELL DONE!";
-        //    StartCoroutine(Stars(1));
-        //}
-        //else
-        //{
-        //    goodJobText.text = "GOOD!";
-        //    StartCoroutine(Stars(0));
-        //}
+        if (gameManager.timer >= gameManager.timer * 2 / 3)
+        {
+            //goodJobText.text = "FANTASTIC!";
+            StartCoroutine(Stars(3));
+        }
+        else if (gameManager.timer < timer * 2 / 3 && gameManager.timer >= timer / 3)
+        {
+            //goodJobText.text = "AWESOME!";
+            StartCoroutine(Stars(2));
+        }
+        else if (gameManager.timer <= timer * 1 / 3)
+        {
+            //goodJobText.text = "WELL DONE!";
+            StartCoroutine(Stars(1));
+        }
+        else
+        {
+            //goodJobText.text = "GOOD!";
+            StartCoroutine(Stars(0));
+        }
     }
 
     public void PausedScreen()
@@ -88,14 +120,18 @@ public class GameUI : MonoBehaviour
 
     public void GoToMainMenu()
     {
-        Time.timeScale = 1;
-        SceneManager.LoadScene("MainMenu");
+        gameManager.GoToMainMenu();
     }
     public void Restart()
     {
-        Time.timeScale = 1;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        gameManager.Restart();
     }
+
+    public void NextLevel()
+    {
+        gameManager.NextLevel();
+    }
+
     public void MuteToggle()
     {
         EffectManager.instance.MuteToggle();
@@ -107,8 +143,6 @@ public class GameUI : MonoBehaviour
         EffectManager.instance.VibrationToggle();
         vibrateOff.gameObject.SetActive(EffectManager.instance.isNotVibrating);
     }
-
-
 
     private IEnumerator Stars(int shineNumber)
     {

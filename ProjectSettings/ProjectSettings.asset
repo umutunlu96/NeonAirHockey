@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: BetaTech Games
-  productName: Neon Air Hockey
+  productName: Neon Hockey
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -278,48 +278,6 @@ PlayerSettings:
   - m_BuildTarget: Android
     m_Icons:
     - m_Textures:
-      - {fileID: 2800000, guid: a955b1904cc188048b5cc583d4ad0b2e, type: 3}
-      - {fileID: 2800000, guid: 1b66db53a6b54454b97a0b11eb727c61, type: 3}
-      m_Width: 432
-      m_Height: 432
-      m_Kind: 2
-      m_SubKind: 
-    - m_Textures:
-      - {fileID: 2800000, guid: 31e144b329987674fba5614dea6a31bf, type: 3}
-      - {fileID: 2800000, guid: c36b660f03686e84b9f32163feaf92a7, type: 3}
-      m_Width: 324
-      m_Height: 324
-      m_Kind: 2
-      m_SubKind: 
-    - m_Textures:
-      - {fileID: 2800000, guid: 7b8728a1794fbf54bb1506cc60d0f934, type: 3}
-      - {fileID: 2800000, guid: 6ef4e00b6a364ea4a846e4d1a1ad0d9a, type: 3}
-      m_Width: 216
-      m_Height: 216
-      m_Kind: 2
-      m_SubKind: 
-    - m_Textures:
-      - {fileID: 2800000, guid: 011ef4c7502b98947911cbe85187ca68, type: 3}
-      - {fileID: 2800000, guid: 436848bdce44a5845a3ae836fff2368e, type: 3}
-      m_Width: 162
-      m_Height: 162
-      m_Kind: 2
-      m_SubKind: 
-    - m_Textures:
-      - {fileID: 2800000, guid: 6c5bf299d03b8f44f83f82990bfbadf6, type: 3}
-      - {fileID: 2800000, guid: fa6217c717bac9843b0eff226c38b3c6, type: 3}
-      m_Width: 108
-      m_Height: 108
-      m_Kind: 2
-      m_SubKind: 
-    - m_Textures:
-      - {fileID: 2800000, guid: c5f96c60a658ef444abeb3db23f7e286, type: 3}
-      - {fileID: 2800000, guid: 177a05bf2e83fa040a3673de2e4f9468, type: 3}
-      m_Width: 81
-      m_Height: 81
-      m_Kind: 2
-      m_SubKind: 
-    - m_Textures:
       - {fileID: 2800000, guid: 049166b1dee4dc74e828f44cc886336f, type: 3}
       m_Width: 192
       m_Height: 192
@@ -390,6 +348,48 @@ PlayerSettings:
       m_Width: 36
       m_Height: 36
       m_Kind: 0
+      m_SubKind: 
+    - m_Textures:
+      - {fileID: 2800000, guid: a955b1904cc188048b5cc583d4ad0b2e, type: 3}
+      - {fileID: 2800000, guid: 1b66db53a6b54454b97a0b11eb727c61, type: 3}
+      m_Width: 432
+      m_Height: 432
+      m_Kind: 2
+      m_SubKind: 
+    - m_Textures:
+      - {fileID: 2800000, guid: 31e144b329987674fba5614dea6a31bf, type: 3}
+      - {fileID: 2800000, guid: c36b660f03686e84b9f32163feaf92a7, type: 3}
+      m_Width: 324
+      m_Height: 324
+      m_Kind: 2
+      m_SubKind: 
+    - m_Textures:
+      - {fileID: 2800000, guid: 7b8728a1794fbf54bb1506cc60d0f934, type: 3}
+      - {fileID: 2800000, guid: 6ef4e00b6a364ea4a846e4d1a1ad0d9a, type: 3}
+      m_Width: 216
+      m_Height: 216
+      m_Kind: 2
+      m_SubKind: 
+    - m_Textures:
+      - {fileID: 2800000, guid: 011ef4c7502b98947911cbe85187ca68, type: 3}
+      - {fileID: 2800000, guid: 436848bdce44a5845a3ae836fff2368e, type: 3}
+      m_Width: 162
+      m_Height: 162
+      m_Kind: 2
+      m_SubKind: 
+    - m_Textures:
+      - {fileID: 2800000, guid: 6c5bf299d03b8f44f83f82990bfbadf6, type: 3}
+      - {fileID: 2800000, guid: fa6217c717bac9843b0eff226c38b3c6, type: 3}
+      m_Width: 108
+      m_Height: 108
+      m_Kind: 2
+      m_SubKind: 
+    - m_Textures:
+      - {fileID: 2800000, guid: c5f96c60a658ef444abeb3db23f7e286, type: 3}
+      - {fileID: 2800000, guid: 177a05bf2e83fa040a3673de2e4f9468, type: 3}
+      m_Width: 81
+      m_Height: 81
+      m_Kind: 2
       m_SubKind: 
   m_BuildTargetBatching: []
   m_BuildTargetGraphicsJobs:
