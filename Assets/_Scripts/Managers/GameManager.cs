@@ -8,20 +8,19 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public bool gameOver;
 
+
+
+    [Header("Timer")]
+    public float timer = 15;
+
     private int levelNumber;
-
     private Animator fadeAnim;
-
     private bool isEscape;
-
-    public bool isVibrating;
-
     private GameUI gameUI;
 
     void Awake()
     {
         levelNumber = PlayerPrefs.GetInt("Level", 1);
-        isVibrating = PlayerPrefs.GetInt("Vibrate", 1) == 1;
         gameUI = FindObjectOfType<GameUI>();
 
         //fadeAnim = GameObject.Find("Fade").GetComponent<Animator>();
@@ -29,16 +28,15 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        timer -= Time.deltaTime;
 
         CloseApplication();
 
-
-        if (!gameOver /*&& FindObjectOfType<Hockey>().tryAmount <= 0*/)   //GameOverCondition
+        if (!gameOver && timer <= 0)
         {
             //GameUI.instance.GameOverScreen();
             gameOver = true;
         }
-
     }
 
     public void CheckFinishState()

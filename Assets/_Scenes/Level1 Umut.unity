@@ -865,6 +865,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 819139777284665756, guid: d027b3b1d808f164a969fb573c038106, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 819139777284665759, guid: d027b3b1d808f164a969fb573c038106, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -954,6 +958,10 @@ PrefabInstance:
       value: GameUI
       objectReference: {fileID: 0}
     - target: {fileID: 819139777284665760, guid: d027b3b1d808f164a969fb573c038106, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526633101201763705, guid: d027b3b1d808f164a969fb573c038106, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}

@@ -26,7 +26,7 @@ public class GameUI : MonoBehaviour
     [Header("Game Over")]
     public GameObject gameOverPanel;
 
-    private bool isMuted;
+
 
     void Awake()
     {
@@ -38,10 +38,9 @@ public class GameUI : MonoBehaviour
     void Start()
     {
         canvas.worldCamera = Camera.main;
-        isMuted = PlayerPrefs.GetInt("Muted") == 1;
-        SoundManager.instance.audioSource.mute = isMuted;
-        soundOff.gameObject.SetActive(isMuted);
-        vibrateOff.gameObject.SetActive(gameManager.isVibrating);
+        
+        soundOff.gameObject.SetActive(PlayerPrefs.GetInt("Muted") == 1);
+        vibrateOff.gameObject.SetActive(PlayerPrefs.GetInt("Vibrate", 1) == 1);
     }
 
     public void GameOverScreen()
@@ -97,21 +96,19 @@ public class GameUI : MonoBehaviour
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-
     public void MuteToggle()
     {
-        isMuted = !isMuted;
-        SoundManager.instance.audioSource.mute = isMuted;
-        soundOff.gameObject.SetActive(isMuted);
-        PlayerPrefs.SetInt("Muted", isMuted ? 1 : 0);
+        EffectManager.instance.MuteToggle();
+        soundOff.gameObject.SetActive(EffectManager.instance.isMuted);
     }
 
     public void VibrationToggle()
     {
-        gameManager.isVibrating = !gameManager.isVibrating;
-        vibrateOff.gameObject.SetActive(gameManager.isVibrating);
-        PlayerPrefs.SetInt("Vibrate", gameManager.isVibrating ? 1 : 0);
+        EffectManager.instance.VibrationToggle();
+        vibrateOff.gameObject.SetActive(EffectManager.instance.isNotVibrating);
     }
+
+
 
     private IEnumerator Stars(int shineNumber)
     {

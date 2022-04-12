@@ -28,19 +28,15 @@ public class Hockey : MonoBehaviour
     private Rigidbody2D rigidBody;
     private GameObject colorChilds;
 
+    private bool isVibrating;
+    [SerializeField] private long vibrationLong = 30;
+
     [Header("Particle System")]
-    [Header("Top")]
+    private GameObject particleSys;
     [SerializeField] private GameObject redParticleSystem;
     [SerializeField] private GameObject greenParticleSystem;
     [SerializeField] private GameObject blueParticleSystem;
     [SerializeField] private GameObject yellowParticleSystem;
-    [Header("Bottom")]
-
-    [Header("Right")]
-
-    [Header("Left")]
-
-    private GameObject particleSys;
 
     private enum BallState
     {
@@ -64,6 +60,7 @@ public class Hockey : MonoBehaviour
 
         gamaManager = GameObject.Find("GameManager").GetComponent<GameManager>();
 
+        isVibrating = PlayerPrefs.GetInt("Vibrate", 1) == 0;
     }
 
     private void Start()
@@ -195,7 +192,7 @@ public class Hockey : MonoBehaviour
         if (target.tag == "Finish")
         {
             SoundManager.instance.PlaySoundFX(finishHit, .2f);
-
+            Vibration.Vibrate(vibrationLong);
             rigidBody.velocity = new Vector2(0, 0);
             currentState = BallState.Finish;
             target.tag = "Untagged";
@@ -206,6 +203,11 @@ public class Hockey : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (isVibrating)
+        {
+            Vibration.Vibrate(vibrationLong);
+        }
+
         switch (collision.gameObject.tag)
         {
             case "WallRed":
