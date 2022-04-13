@@ -5147,8 +5147,8 @@ MonoBehaviour:
   - {fileID: 8518825256182431729}
   HomeWallColors:
   - {fileID: 1466894561}
-  - {fileID: 681454154}
   - {fileID: 1942007265}
+  - {fileID: 681454154}
   - {fileID: 660745759}
 --- !u!1 &1478296919
 GameObject:
