@@ -12,6 +12,7 @@ public class BallScript : MonoBehaviour, IResettable
     public AudioClip ballCollision;
     public AudioClip goal;
 
+    public GameObject[] BallColors;
 
     void Start()
     {
@@ -52,17 +53,25 @@ public class BallScript : MonoBehaviour, IResettable
     private void OnCollisionEnter2D(Collision2D target)
     {
         SoundManager.instance.PlaySoundFX(ballCollision, .5f);
+
+        if (target.gameObject.tag == "WallRed")
+            SetColor(0);
+        if (target.gameObject.tag == "WallGreen")
+            SetColor(1);
+        if (target.gameObject.tag == "WallBlue")
+            SetColor(2);
+        if (target.gameObject.tag == "WallYellow")
+            SetColor(3);
     }
 
-    private void OnCollisionStay2D(Collision2D target)
+    private void SetColor(int Index)
     {
-        if (target.gameObject.tag == "WallRed" || target.gameObject.tag == "WallGreen" || target.gameObject.tag == "WallBlue" || target.gameObject.tag == "WallYellow")
+        foreach (var Color in BallColors)
         {
-            GetComponent<Rigidbody2D>().AddForce(new Vector2((target.transform.position.x > 0 ? -1f : 1f),
-            target.transform.position.y > 0 ? -1f : 1f), ForceMode2D.Impulse);
+            Color.SetActive(false);
         }
+        BallColors[Index].SetActive(true);
     }
-
 
     private IEnumerator ResetBall(bool didAiScore)
     {
@@ -81,6 +90,4 @@ public class BallScript : MonoBehaviour, IResettable
     {
         rigidBody.position = new Vector2(0, 0);
     }
-
-
 }

@@ -284,7 +284,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 0.4528302, g: 0.4528302, b: 0.4528302, a: 0}
+  m_Color: {r: 0.4528302, g: 0.4528302, b: 0.4528302, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -689,6 +689,7 @@ MonoBehaviour:
   lineRendererMaxRange: 3
   setMaxSpeed: 0
   maxSpeed: 5
+  vibrationLong: 30
   redParticleSystem: {fileID: 3508021055102156376, guid: 702e89fe06c2e5b4dba5703e0eef9304, type: 3}
   greenParticleSystem: {fileID: 7133424829404630849, guid: a6b388e2d15a5ed4eb9f9850a4c20155, type: 3}
   blueParticleSystem: {fileID: 772904414395456499, guid: 32f170f1be59a96458ea261baba232cb, type: 3}

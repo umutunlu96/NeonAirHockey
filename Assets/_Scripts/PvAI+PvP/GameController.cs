@@ -10,11 +10,41 @@ public class GameController : MonoBehaviour
 
     private ScoreScript scoreScript;
 
+    public GameObject[] AwayPlayerColors;
+    public GameObject[] AwayWallColors;
+    public GameObject[] HomePlayerColors;
+    public GameObject[] HomeWallColors;
+
+    private int homeColorIndex;
+    private int awayColorIndex;
+
     void Start()
     {
         scoreScript = GetComponent<ScoreScript>();
-
         gameDuration = PlayerPrefs.GetInt("PvPTime", 3) * 60;
+
+        homeColorIndex = PlayerPrefs.GetInt("HomeColor", 0);
+        awayColorIndex = PlayerPrefs.GetInt("AwayColor", 1);
+
+        GetColors();
+    }
+
+    private void GetColors()
+    {
+        ChangeColor(HomePlayerColors, homeColorIndex);
+        ChangeColor(HomeWallColors, homeColorIndex);
+
+        ChangeColor(AwayPlayerColors, awayColorIndex);
+        ChangeColor(AwayWallColors, awayColorIndex);
+    }
+
+    private void ChangeColor(GameObject[] Sides, int Color)
+    {
+        foreach (GameObject Side in Sides)
+        {
+            Side.SetActive(false);
+        }
+        Sides[Color].SetActive(true);
     }
 
     private int CheckWhoWin()
