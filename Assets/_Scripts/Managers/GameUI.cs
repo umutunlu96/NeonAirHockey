@@ -22,9 +22,7 @@ public class GameUI : MonoBehaviour
 
     [Header("Win Screen")]
     public GameObject winPanel;
-    //public Text goodJobText;
-    public Image star1, star2, star3;
-    public Sprite shineStar, darkStar;
+    public Text currentLevel;
 
     [Header("Game Over")]
     public GameObject gameOverPanel;
@@ -42,7 +40,8 @@ public class GameUI : MonoBehaviour
     {
         canvas.worldCamera = Camera.main;
         timer = gameManager.timer;
-        
+        currentLevel.text = PlayerPrefs.GetInt("Level", 1).ToString();
+
         soundOff.gameObject.SetActive(PlayerPrefs.GetInt("Muted") == 1);
         vibrateOff.gameObject.SetActive(PlayerPrefs.GetInt("Vibrate", 1) == 1);
     }

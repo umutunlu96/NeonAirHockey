@@ -9,12 +9,6 @@ EditorBuildSettings:
     path: Assets/_Scenes/Menu/MainMenu Glow New.unity
     guid: 3f536b27d421f8542b4c20dc7d2b6a1a
   - enabled: 1
-    path: Assets/_Scenes/PvP/PlayerVsAiNew.unity
-    guid: f175d71dc603ff941a5361ad613dbaee
-  - enabled: 1
-    path: Assets/_Scenes/PvP/PlayerVsPlayerNew.unity
-    guid: ddb4be40453694e4494bb9b2a12c4713
-  - enabled: 1
     path: Assets/_Scenes/Level1.unity
     guid: 1aa7a55ef6b8ece4cb1601613d97f236
   - enabled: 1
@@ -164,4 +158,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/Level39.unity
     guid: 5afa9f6b6e9e77d4aa266239082ec617
+  - enabled: 1
+    path: Assets/_Scenes/PvP/PlayerVsAiNew.unity
+    guid: f175d71dc603ff941a5361ad613dbaee
+  - enabled: 1
+    path: Assets/_Scenes/PvP/PlayerVsPlayerNew.unity
+    guid: ddb4be40453694e4494bb9b2a12c4713
   m_configObjects: {}

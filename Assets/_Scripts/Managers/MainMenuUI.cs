@@ -59,7 +59,7 @@ public class MainMenuUI : MonoBehaviour
         if (PlayerPrefs.GetInt("Level") >= maxLevel)
             SceneManager.LoadScene(maxLevel);
         else
-            SceneManager.LoadScene(PlayerPrefs.GetInt("Level", 1) + 2);
+            SceneManager.LoadScene(PlayerPrefs.GetInt("Level", 1));
     }
 
     public void PlayPlayerVsPlayer()
