@@ -40,7 +40,7 @@ public class GameUI : MonoBehaviour
     {
         canvas.worldCamera = Camera.main;
         timer = gameManager.timer;
-        currentLevel.text = PlayerPrefs.GetInt("Level", 1).ToString();
+        currentLevel.text = SceneManager.GetActiveScene().buildIndex.ToString();
 
         soundOff.gameObject.SetActive(PlayerPrefs.GetInt("Muted") == 1);
         vibrateOff.gameObject.SetActive(PlayerPrefs.GetInt("Vibrate", 1) == 1);
