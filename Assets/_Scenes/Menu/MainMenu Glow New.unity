@@ -20813,7 +20813,7 @@ MonoBehaviour:
   championship: {fileID: 903593968}
   playerVsAi: {fileID: 1282911935}
   playerVsPlayer: {fileID: 1869646616}
-  about: {fileID: 0}
+  about: {fileID: 892567024}
   DifficultyTogles: {fileID: 144485553}
 --- !u!1 &1704033776
 GameObject:

@@ -64,13 +64,13 @@ public class MainMenuUI : MonoBehaviour
 
     public void PlayPlayerVsPlayer()
     {
-        SceneManager.LoadScene("PlayerVsPlayer");
+        SceneManager.LoadScene("PlayerVsPlayerNew");
     }
 
 
     public void PlayVsAi()
     {
-        SceneManager.LoadScene("PlayerVsAi");
+        SceneManager.LoadScene("PlayerVsAiNew");
     }
 
     private void closePanelGoMain()
