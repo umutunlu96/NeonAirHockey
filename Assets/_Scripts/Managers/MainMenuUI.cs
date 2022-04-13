@@ -22,7 +22,6 @@ public class MainMenuUI : MonoBehaviour
 
     private void Start()
     {
-        PlayerPrefs.SetInt("AdShowCount", 0);
         DifficultyTogles.transform.GetChild((int)AiSettings.Difficulty).GetComponent<Toggle>().isOn = true;
     }
 
@@ -65,12 +64,14 @@ public class MainMenuUI : MonoBehaviour
     public void PlayPlayerVsPlayer()
     {
         SceneManager.LoadScene("PlayerVsPlayerNew");
+        PlayerPrefs.SetInt("PvPAdShowCount", PlayerPrefs.GetInt("PvPAdShowCount") + 1);
     }
 
 
     public void PlayVsAi()
     {
         SceneManager.LoadScene("PlayerVsAiNew");
+        PlayerPrefs.SetInt("PvPAdShowCount", PlayerPrefs.GetInt("PvPAdShowCount") + 1);
     }
 
     private void closePanelGoMain()

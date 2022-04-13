@@ -17609,7 +17609,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 2430e7d9c48bcdb4aa8f2e0a473be991, type: 3}
-  m_Type: 1
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -19699,7 +19699,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1696391657}
         m_TargetAssemblyTypeName: MainMenuUI, Assembly-CSharp
-        m_MethodName: PlayVsAi
+        m_MethodName: PlayPlayerVsPlayer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

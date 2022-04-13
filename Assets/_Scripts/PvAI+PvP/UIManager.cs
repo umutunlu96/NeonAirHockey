@@ -50,6 +50,11 @@ public class UIManager : MonoBehaviour
         CanvasGame.SetActive(false);
         CanvasRestart.SetActive(true);
 
+
+
+        PvPAdManager.instance.ShowAd();
+
+
         if (whoWin == 1)
         {
             PlayWinSound();
@@ -67,7 +72,7 @@ public class UIManager : MonoBehaviour
         }
         else if (whoWin == 0)
         {
-            PlayWinSound();
+            PlayDrawSound();
             WinTxt.SetActive(false);
             LoseTxt.SetActive(false);
             DrawTxt.SetActive(true);
@@ -91,6 +96,10 @@ public class UIManager : MonoBehaviour
     public void RestartGame()
     {
         Time.timeScale = 1;
+
+        PlayerPrefs.SetInt("PvPAdShowCount", PlayerPrefs.GetInt("PvPAdShowCount") + 1);
+        PvPAdManager.instance.AdCheck();
+
         CanvasGame.SetActive(true);
         CanvasRestart.SetActive(false);
 
