@@ -922,7 +922,7 @@ Transform:
   m_GameObject: {fileID: 523837582}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0004598, y: 1, z: 1}
+  m_LocalScale: {x: 0.99825996, y: 1, z: 1}
   m_Children:
   - {fileID: 1211892325}
   - {fileID: 1052964674}
@@ -1236,7 +1236,7 @@ PrefabInstance:
     - target: {fileID: 819139777284665756, guid: d027b3b1d808f164a969fb573c038106, type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1755288341}
     - target: {fileID: 819139777284665759, guid: d027b3b1d808f164a969fb573c038106, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2161,6 +2161,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4314042635131441815, guid: 5c85e902417d37040b64004e5ae6d3e2, type: 3}
   m_PrefabInstance: {fileID: 1755288339}
   m_PrefabAsset: {fileID: 0}
+--- !u!20 &1755288341 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 4314042635131441768, guid: 5c85e902417d37040b64004e5ae6d3e2, type: 3}
+  m_PrefabInstance: {fileID: 1755288339}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1760394824
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2263,11 +2268,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8518825257767552706, guid: 3e97958f788f28c47bc3d0a1457b5d0f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.7504598
+      value: 1.74826
       objectReference: {fileID: 0}
     - target: {fileID: 8518825257767552706, guid: 3e97958f788f28c47bc3d0a1457b5d0f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.7504598
+      value: 1.74826
       objectReference: {fileID: 0}
     - target: {fileID: 8518825257767552706, guid: 3e97958f788f28c47bc3d0a1457b5d0f, type: 3}
       propertyPath: m_LocalPosition.x
