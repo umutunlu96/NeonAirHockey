@@ -20,13 +20,51 @@ public class GameManager : MonoBehaviour
     private bool isEscape;
     private GameUI gameUI;
 
+    [Header("ADS")]
+    private bool SHOWADS = true;
+    public int adShowCount; //Ads
+    public bool adShow; //Ads
+
     void Awake()
     {
         levelNumber = PlayerPrefs.GetInt("Level", 1);
         gameUI = FindObjectOfType<GameUI>();
-
+        adShowCount = PlayerPrefs.GetInt("AdShowCount", 0);
         //fadeAnim = GameObject.Find("Fade").GetComponent<Animator>();
     }
+
+    void Start()
+    {
+        AdCheck(SHOWADS);
+    }
+
+
+    #region ADS
+    private void AdCheck(bool showAds)
+    {
+        if (showAds)
+        {
+            adShowCount = PlayerPrefs.GetInt("AdShowCount", 0);
+            if (adShowCount >= 5)
+            {
+                AdManager.instance.RequestIntertial();
+                adShow = true;
+            }
+        }
+    }
+
+    private IEnumerator ShowAd(bool adShow, float delatTime)
+    {
+        yield return new WaitForSeconds(delatTime);
+
+        if (adShow)
+        {
+            AdManager.instance.ShowIntertial();
+            this.adShow = false;
+        }
+    }
+
+    #endregion
 
     void Update()
     {
@@ -38,6 +76,7 @@ public class GameManager : MonoBehaviour
         if (!gameOver && timer <= 0)
         {
             GameUI.instance.GameOverScreen();
+            StartCoroutine(ShowAd(adShow, .05f));
             gameOver = true;
         }
     }
@@ -46,9 +85,12 @@ public class GameManager : MonoBehaviour
     {
         if (GameObject.FindGameObjectWithTag("Finish") == null)
         {
+
             gameWin = true;
 
             GameUI.instance.WinScreen();
+
+            StartCoroutine(ShowAd(adShow, .05f));
 
             if (levelNumber == SceneManager.GetActiveScene().buildIndex)
                 PlayerPrefs.SetInt("Level", levelNumber + 1);
@@ -66,6 +108,7 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        PlayerPrefs.SetInt("AdShowCount", PlayerPrefs.GetInt("AdShowCount") + 1);
         //StartCoroutine(FadeIn(SceneManager.GetActiveScene().buildIndex));
     }
 
@@ -73,6 +116,7 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        PlayerPrefs.SetInt("AdShowCount", PlayerPrefs.GetInt("AdShowCount") + 1);
         //StartCoroutine(FadeIn(SceneManager.GetActiveScene().buildIndex + 1));
     }
 

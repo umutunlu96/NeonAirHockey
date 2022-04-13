@@ -72,7 +72,7 @@ public class GameUI : MonoBehaviour
 
     public void GameOverScreen()
     {
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
         gameOverPanel.SetActive(true);
         GameObject.FindObjectOfType<Hockey>().gameObject.SetActive(false);
     }
