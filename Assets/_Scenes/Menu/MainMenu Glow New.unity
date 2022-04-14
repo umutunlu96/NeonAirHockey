@@ -3758,7 +3758,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: OYUNCU VS BOT
+  m_Text: PLAYER VS BOT
 --- !u!222 &275480674
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7072,7 +7072,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: HAKKINDA
+  m_Text: ABOUT
 --- !u!222 &633275337
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11148,7 +11148,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: OYUNCU VS OYUNCU
+  m_Text: PLAYER VS PLAYER
 --- !u!222 &937029346
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11953,7 +11953,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: OYNA
+  m_Text: PLAY
 --- !u!222 &999709887
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18836,15 +18836,15 @@ MonoBehaviour:
     m_FontSize: 69
     m_FontStyle: 1
     m_BestFit: 1
-    m_MinSize: 10
-    m_MaxSize: 79
+    m_MinSize: 12
+    m_MaxSize: 70
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: DAHA FAZLA UYGULAMA
+  m_Text: MORE APPS
 --- !u!222 &1622727628
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19916,7 +19916,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u015EAMP\u0130YONLUK"
+  m_Text: CHAMPIONSHIP
 --- !u!222 &1721012843
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23582,6 +23582,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5792409287293304514, guid: 302ee6718ad4673479ef4649d3eaa60a, type: 3}
+      propertyPath: saveLoad
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5792409287293304514, guid: 302ee6718ad4673479ef4649d3eaa60a, type: 3}
+      propertyPath: currentLanguage
+      value: English
+      objectReference: {fileID: 0}
     - target: {fileID: 5792409287293304515, guid: 302ee6718ad4673479ef4649d3eaa60a, type: 3}
       propertyPath: m_RootOrder
       value: 3
