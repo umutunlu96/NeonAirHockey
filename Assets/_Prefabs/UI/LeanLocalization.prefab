@@ -1,5 +1,92 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &747334290
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 747334291}
+  - component: {fileID: 747334292}
+  m_Layer: 0
+  m_Name: Key_Colors
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &747334291
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747334290}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5792409287293304515}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &747334292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747334290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: COLORS
+    Object: {fileID: 0}
+  - Language: Chinese
+    Text: "\u989C\u8272"
+    Object: {fileID: 0}
+  - Language: Hindi
+    Text: "\u0930\u0902\u0917 \u0915\u0940"
+    Object: {fileID: 0}
+  - Language: Spanish
+    Text: COLORES
+    Object: {fileID: 0}
+  - Language: French
+    Text: COULEURS
+    Object: {fileID: 0}
+  - Language: Arabic
+    Text: "\u0646\u0627\u0648\u0644\u0623\u0644\u0627"
+    Object: {fileID: 0}
+  - Language: Bengali
+    Text: "\u09B0\u0999"
+    Object: {fileID: 0}
+  - Language: Russian
+    Text: "\u0426\u0412\u0415\u0422\u0410"
+    Object: {fileID: 0}
+  - Language: Portuguese
+    Text: CORES
+    Object: {fileID: 0}
+  - Language: Indonesian
+    Text: WARNA
+    Object: {fileID: 0}
+  - Language: Japanese
+    Text: "\u8272"
+    Object: {fileID: 0}
+  - Language: Korean
+    Text: "\uADF8\uB9BC \uBB3C\uAC10"
+    Object: {fileID: 0}
+  - Language: German
+    Text: FARBEN
+    Object: {fileID: 0}
+  - Language: Turkish
+    Text: RENKLER
+    Object: {fileID: 0}
 --- !u!1 &5792409286815988961
 GameObject:
   m_ObjectHideFlags: 0
@@ -832,6 +919,7 @@ Transform:
   - {fileID: 5792409287263617985}
   - {fileID: 5792409288608488478}
   - {fileID: 5792409288334494502}
+  - {fileID: 747334291}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -849,8 +937,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentLanguage: Turkish
   detectLanguage: 1
-  defaultLanguage: Turkish
-  saveLoad: 0
+  defaultLanguage: English
+  saveLoad: 1
   prefabs: []
 --- !u!1 &5792409287306509501
 GameObject:
