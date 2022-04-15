@@ -7,6 +7,7 @@ public class GameController : MonoBehaviour
     private float gameDuration;
 
     private bool gameEnd = false;
+    private bool isEscape = false;
 
     private ScoreScript scoreScript;
 
@@ -61,16 +62,45 @@ public class GameController : MonoBehaviour
     {
         if(!gameEnd)
             gameDuration -= Time.deltaTime;
-        if (gameDuration <= 0)
+        if (!gameEnd && gameDuration <= 0)
         {
             gameEnd = true;
+            print("GameController GameEnnd");
             UIManager.Instance.ShowRestartCanvas(CheckWhoWin());
+            PvPAdManager.instance.ShowAd();
         }
+
+        CloseApplication();
     }
 
     public void ResetGame()
     {
         gameDuration = PlayerPrefs.GetInt("PvPTime") * 60;
+        print("GameController ResetGame");
         gameEnd = false;
+    }
+
+    void CloseApplication()
+    {
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            if (isEscape)
+            {
+                Application.Quit();
+            }
+            else
+            {
+                UIManager.Instance.PauseGame();
+                print("GameController Escape presseed");
+                isEscape = true;
+                if (!IsInvoking("DisableDoubleClick"))
+                    Invoke("DisableDoubleClick", 0.3f);
+            }
+        }
+    }
+
+    void DisableDoubleClick()
+    {
+        isEscape = false;
     }
 }

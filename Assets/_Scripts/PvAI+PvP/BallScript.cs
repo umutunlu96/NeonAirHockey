@@ -14,11 +14,15 @@ public class BallScript : MonoBehaviour, IResettable
 
     public GameObject[] BallColors;
 
+    public bool isVibrating;
+    [SerializeField] private long vibrationLong = 30;
+
     void Start()
     {
         UIManager.Instance.ResetableGameObjects.Add(this);
         rigidBody = GetComponent<Rigidbody2D>();
         ScoreScriptInstance = GameObject.Find("GameManager").GetComponent<ScoreScript>();
+        isVibrating = PlayerPrefs.GetInt("Vibrate", 1) == 0;
         isGoal = false;
     }
 
@@ -38,6 +42,9 @@ public class BallScript : MonoBehaviour, IResettable
                 isGoal = true;
                 StartCoroutine(ResetBall(false));
                 SoundManager.instance.PlaySoundFX(goal, .5f);
+                
+                if(isVibrating)
+                    Vibration.Vibrate(vibrationLong);
             }
 
             else if (target.tag == "PlayerGoal")
@@ -46,6 +53,9 @@ public class BallScript : MonoBehaviour, IResettable
                 isGoal = true;
                 StartCoroutine(ResetBall(true));
                 SoundManager.instance.PlaySoundFX(goal, .5f);
+                    
+                if(isVibrating)
+                    Vibration.Vibrate(vibrationLong);
             }
         }
     }
@@ -88,6 +98,7 @@ public class BallScript : MonoBehaviour, IResettable
 
     public void ResetPosition()
     {
+        rigidBody.velocity = new Vector2(0, 0);
         rigidBody.position = new Vector2(0, 0);
     }
 }

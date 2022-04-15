@@ -47,11 +47,12 @@ public class PvPAdManager : MonoBehaviour
         }
     }
 
-
-
     public void ShowAd()
     {
-        AdManager.instance.ShowIntertialPvP();
-        this.adShow = false;
+        if (SHOWADS && adShow)
+        {
+            AdManager.instance.ShowIntertialPvP();
+            this.adShow = false;
+        }
     }
 }
