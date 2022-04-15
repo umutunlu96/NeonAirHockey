@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
@@ -21,17 +20,11 @@ public class UIManager : MonoBehaviour
     [Header("Canvas")]
     public GameObject CanvasGame;
     public GameObject CanvasRestart;
-    public GameObject CanvasPause;
 
     [Header("CanvasRestart")]
     public GameObject WinTxt;
     public GameObject LoseTxt;
     public GameObject DrawTxt;
-
-    [Header("PausedMenu")]
-    public Image soundOff;
-    public Image vibrateOff;
-
 
     [Header("Audio")]
     public AudioClip wonGame;
@@ -49,15 +42,18 @@ public class UIManager : MonoBehaviour
     {
         scoreScript = GameObject.FindObjectOfType<ScoreScript>();
         gameController = GameObject.FindObjectOfType<GameController>();
-        soundOff.gameObject.SetActive(PlayerPrefs.GetInt("Muted") == 1);
-        vibrateOff.gameObject.SetActive(PlayerPrefs.GetInt("Vibrate", 1) == 1);
     }
 
     public void ShowRestartCanvas(float whoWin)
     {
-        print("UIManagerShowRestartCanvas");
+        Time.timeScale = 0;
         CanvasGame.SetActive(false);
         CanvasRestart.SetActive(true);
+
+
+
+        PvPAdManager.instance.ShowAd();
+
 
         if (whoWin == 1)
         {
@@ -65,6 +61,7 @@ public class UIManager : MonoBehaviour
             WinTxt.SetActive(true);
             LoseTxt.SetActive(false);
             DrawTxt.SetActive(false);
+
         }
         else if(whoWin == 2)
         {
@@ -79,24 +76,6 @@ public class UIManager : MonoBehaviour
             WinTxt.SetActive(false);
             LoseTxt.SetActive(false);
             DrawTxt.SetActive(true);
-        }
-
-        PvPAdManager.instance.ShowAd();
-    }
-
-    void Update()
-    {
-        if (CanvasPause.activeInHierarchy)
-        {
-            Time.timeScale = 0;
-        }
-        if (CanvasRestart.activeInHierarchy)
-        {
-            Time.timeScale = 0;
-        }
-        if (CanvasGame.activeInHierarchy)
-        {
-            Time.timeScale = 1;
         }
     }
 
@@ -116,10 +95,13 @@ public class UIManager : MonoBehaviour
 
     public void RestartGame()
     {
-        print("UICanvas Restart Game");
-        PlayerPrefs.SetInt("PvPAdShowCount", PlayerPrefs.GetInt("PvPAdShowCount") + 1);
+        Time.timeScale = 1;
 
+        PlayerPrefs.SetInt("PvPAdShowCount", PlayerPrefs.GetInt("PvPAdShowCount") + 1);
         PvPAdManager.instance.AdCheck();
+
+        CanvasGame.SetActive(true);
+        CanvasRestart.SetActive(false);
 
         scoreScript.ResetScore();
         gameController.ResetGame();
@@ -129,42 +111,18 @@ public class UIManager : MonoBehaviour
             obj.ResetPosition();
         }
 
-        ResumeGame();
-    }
-
-    public void PauseGame()
-    {
-        print("UICanvas Pause Game");
-        CanvasPause.SetActive(true);
-        CanvasRestart.SetActive(false);
-        CanvasGame.SetActive(false);
-    }
-
-    public void ResumeGame()
-    {
-        print("UI Canvas Resume Game");
-        CanvasPause.SetActive(false);
-        CanvasRestart.SetActive(false);
-        CanvasGame.SetActive(true);
     }
 
     public void GoToMenu()
     {
         Time.timeScale = 1;
-        print("UICanvas GoToMenu");
-        SceneManager.LoadScene("MainMenu Glow New");
+        SceneManager.LoadScene("MainMenu");
     }
-
-    public void MuteToggle()
-    {
-        EffectManager.instance.MuteToggle();
-        soundOff.gameObject.SetActive(EffectManager.instance.isMuted);
-    }
-
-    public void VibrationToggle()
-    {
-        EffectManager.instance.VibrationToggle();
-        vibrateOff.gameObject.SetActive(EffectManager.instance.isNotVibrating);
-        FindObjectOfType<BallScript>().isVibrating = !(FindObjectOfType<BallScript>().isVibrating);
-    }
+        
+        public void GoToGlowMenu()
+        {
+            Time.timeScale = 1;
+            SceneManager.LoadScene("MainMenu Glow New");
+        }
+    
 }
