@@ -118,11 +118,4 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 1;
         SceneManager.LoadScene("MainMenu");
     }
-        
-        public void GoToGlowMenu()
-        {
-            Time.timeScale = 1;
-            SceneManager.LoadScene("MainMenu Glow New");
-        }
-    
 }
