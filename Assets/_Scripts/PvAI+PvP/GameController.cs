@@ -60,8 +60,11 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
-        if(!gameEnd)
+        if (!gameEnd)
+        {
             gameDuration -= Time.deltaTime;
+            print(gameDuration);
+        }
         if (!gameEnd && gameDuration <= 0)
         {
             gameEnd = true;
