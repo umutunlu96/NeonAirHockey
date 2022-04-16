@@ -28,7 +28,6 @@ public class Hockey : MonoBehaviour
     private Rigidbody2D rigidBody;
     private GameObject colorChilds;
 
-    private bool isVibrating;
     [SerializeField] private long vibrationLong = 30;
 
     [Header("Particle System")]
@@ -59,8 +58,6 @@ public class Hockey : MonoBehaviour
         colorChilds = transform.GetChild(0).gameObject;
 
         gamaManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-
-        isVibrating = PlayerPrefs.GetInt("Vibrate", 1) == 0;
     }
 
     private void Start()

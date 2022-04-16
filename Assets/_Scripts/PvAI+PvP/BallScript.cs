@@ -66,7 +66,7 @@ public class BallScript : MonoBehaviour
                 SoundManager.instance.PlaySoundFX(goal, .5f);
                 
 
-                if (EffectManager.instance.isNotVibrating)
+                if (!EffectManager.instance.isNotVibrating)
                 {
                     Vibration.Vibrate(vibrationLong);
                     print("Vibrate");
