@@ -14,7 +14,7 @@ public class GameScaler : MonoBehaviour
 
     [SerializeField] private float hockeyOffset;
     [SerializeField] private float ballOffset;
-    void Update()
+    void Awake()
     {
         float screenRatioX = (float)Screen.width;
         float screenRatioY = (float)Screen.height;

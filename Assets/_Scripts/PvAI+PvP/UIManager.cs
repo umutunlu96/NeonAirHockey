@@ -86,22 +86,6 @@ public class UIManager : MonoBehaviour
         PvPAdManager.instance.ShowAd();
     }
 
-    void Update()
-    {
-        //if (CanvasPause.activeInHierarchy && Time.timeScale == 1)
-        //{
-        //    Time.timeScale = 0;
-        //}
-        //else if (CanvasRestart.activeInHierarchy && Time.timeScale == 1)
-        //{
-        //    Time.timeScale = 0;
-        //}
-        //else if (CanvasRestart.activeInHierarchy && Time.timeScale == 0)
-        //{
-        //    Time.timeScale = 1;
-        //}
-    }
-
     private void PlayWinSound()
     {
         SoundManager.instance.PlaySoundFX(wonGame, .5f);
@@ -118,6 +102,8 @@ public class UIManager : MonoBehaviour
 
     public void RestartGame()
     {
+        ResumeGame();
+
         print("UICanvas Restart Game");
         PlayerPrefs.SetInt("PvPAdShowCount", PlayerPrefs.GetInt("PvPAdShowCount") + 1);
 
@@ -130,8 +116,6 @@ public class UIManager : MonoBehaviour
         {
             obj.ResetPosition();
         }
-
-        ResumeGame();
     }
 
     public void PauseGame()
