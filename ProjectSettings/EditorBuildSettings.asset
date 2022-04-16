@@ -60,6 +60,9 @@ EditorBuildSettings:
     path: Assets/_Scenes/Level17.unity
     guid: 21d055fa8a7a02b4c8c9ab21e6dbf9a0
   - enabled: 1
+    path: Assets/_Scenes/Level18.unity
+    guid: 2a116b43415368946bfd5a2cf6f42fe1
+  - enabled: 1
     path: Assets/_Scenes/Level19.unity
     guid: 54065c50ebccfbc428c749154d8b8072
   - enabled: 1
@@ -111,8 +114,8 @@ EditorBuildSettings:
     path: Assets/_Scenes/Level35.unity
     guid: ead2c25202ee720498c80fe924cccfab
   - enabled: 1
-    path: Assets/_Scenes/Level18.unity
-    guid: 2a116b43415368946bfd5a2cf6f42fe1
+    path: Assets/_Scenes/Level36.unity
+    guid: 2ad9286a68e5c134fa7ba64c078db67f
   - enabled: 1
     path: Assets/_Scenes/Level37.unity
     guid: c713645f80d432747a241bbac13b3389
@@ -120,8 +123,8 @@ EditorBuildSettings:
     path: Assets/_Scenes/Level38.unity
     guid: 436d24731c77df047974f47db2e46717
   - enabled: 1
-    path: Assets/_Scenes/Level36.unity
-    guid: 2ad9286a68e5c134fa7ba64c078db67f
+    path: Assets/_Scenes/Level39.unity
+    guid: 5afa9f6b6e9e77d4aa266239082ec617
   - enabled: 1
     path: Assets/_Scenes/Level40.unity
     guid: fc2c19be41d4d824ba4e5f0783625d1b
@@ -155,9 +158,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/Level50.unity
     guid: 4b7f3de4d192be84da91968666415322
-  - enabled: 1
-    path: Assets/_Scenes/Level39.unity
-    guid: 5afa9f6b6e9e77d4aa266239082ec617
   - enabled: 1
     path: Assets/_Scenes/PvP/PlayerVsAiNew.unity
     guid: ebf32ea0d928e48419b55dc2a93bd626
