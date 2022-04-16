@@ -4606,6 +4606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d2f6fff7aa7380499b201fa08cf7240, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameEnd: 0
   AwayPlayerColors:
   - {fileID: 8518825257270025212}
   - {fileID: 8518825257303901724}
@@ -6297,7 +6298,7 @@ GameObject:
   - component: {fileID: 2051878424}
   m_Layer: 0
   m_Name: Ball
-  m_TagString: Untagged
+  m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6324,6 +6325,10 @@ MonoBehaviour:
   - {fileID: 1720788216}
   isVibrating: 0
   vibrationLong: 60
+  redParticleSystem: {fileID: 3508021055102156376, guid: 702e89fe06c2e5b4dba5703e0eef9304, type: 3}
+  greenParticleSystem: {fileID: 7133424829404630849, guid: a6b388e2d15a5ed4eb9f9850a4c20155, type: 3}
+  blueParticleSystem: {fileID: 772904414395456499, guid: 32f170f1be59a96458ea261baba232cb, type: 3}
+  yellowParticleSystem: {fileID: 9174231502608633905, guid: ba41e0a1d48375a48a787d08552487ca, type: 3}
 --- !u!58 &2051878425
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -7599,7 +7604,7 @@ GameObject:
   - component: {fileID: 8518825257933946221}
   m_Layer: 0
   m_Name: Player2
-  m_TagString: Untagged
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

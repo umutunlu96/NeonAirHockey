@@ -112,6 +112,9 @@ public class AdManager : MonoBehaviour
     {
         PlayerPrefs.SetInt("PvPAdShowCount", 0);
         GameObject.FindObjectOfType<PvPAdManager>().pvpAdShowCount = 0;
+        print("InstertialPVP closed");
+        Invoke("ScaleTime", .05f);
+        print("InstertialPvP time scaled 0");
     }
 
     public void ShowIntertialPvP()
@@ -119,6 +122,7 @@ public class AdManager : MonoBehaviour
         if (this.interstitialAdPvP.IsLoaded())
         {
             interstitialAdPvP.Show();
+            print("Instertial ad showed");
         }
 
         else
@@ -127,4 +131,9 @@ public class AdManager : MonoBehaviour
         }
     }
     #endregion
+
+    private void ScaleTime()
+    {
+        Time.timeScale = 0;
+    }
 }

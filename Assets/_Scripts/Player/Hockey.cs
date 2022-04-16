@@ -93,6 +93,7 @@ public class Hockey : MonoBehaviour
 
             lineRenderer.enabled = true;
             lineRenderer.SetPosition(0, transform.position);
+            lineRenderer.SetPosition(1, transform.position);
 
             dragStartPos = this.gameObject.transform.position;
         }

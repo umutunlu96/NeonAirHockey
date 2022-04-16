@@ -160,8 +160,8 @@ EditorBuildSettings:
     guid: 5afa9f6b6e9e77d4aa266239082ec617
   - enabled: 1
     path: Assets/_Scenes/PvP/PlayerVsAiNew.unity
-    guid: f175d71dc603ff941a5361ad613dbaee
+    guid: ebf32ea0d928e48419b55dc2a93bd626
   - enabled: 1
     path: Assets/_Scenes/PvP/PlayerVsPlayerNew.unity
-    guid: ddb4be40453694e4494bb9b2a12c4713
+    guid: 68868f2c5d96e9c4ebfdcbed42b89863
   m_configObjects: {}

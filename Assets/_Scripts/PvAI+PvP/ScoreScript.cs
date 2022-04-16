@@ -13,6 +13,7 @@ public class ScoreScript : MonoBehaviour
 
     private int maxScore;
     private UIManager uiManager;
+    private GameController gameController;
 
     #region Scores
     private int aiScore, playerScore;
@@ -43,6 +44,8 @@ public class ScoreScript : MonoBehaviour
     }
     public IEnumerator DelayRestartCanvas(float whoWin)
     {
+        print("MaxScore");
+        gameController.gameEnd = true;
         yield return new WaitForSeconds(1);
         uiManager.ShowRestartCanvas(whoWin);
     }
@@ -52,6 +55,7 @@ public class ScoreScript : MonoBehaviour
     private void Awake()
     {
         uiManager = GameObject.FindObjectOfType<UIManager>();
+        gameController = GameObject.FindObjectOfType<GameController>();
         maxScore = PlayerPrefs.GetInt("PvPGoalAmount",5);
     }
 

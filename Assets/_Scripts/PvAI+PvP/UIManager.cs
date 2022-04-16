@@ -55,6 +55,7 @@ public class UIManager : MonoBehaviour
 
     public void ShowRestartCanvas(float whoWin)
     {
+        Time.timeScale = 0;
         print("UIManagerShowRestartCanvas");
         CanvasGame.SetActive(false);
         CanvasRestart.SetActive(true);
@@ -87,18 +88,18 @@ public class UIManager : MonoBehaviour
 
     void Update()
     {
-        if (CanvasPause.activeInHierarchy)
-        {
-            Time.timeScale = 0;
-        }
-        if (CanvasRestart.activeInHierarchy)
-        {
-            Time.timeScale = 0;
-        }
-        if (CanvasGame.activeInHierarchy)
-        {
-            Time.timeScale = 1;
-        }
+        //if (CanvasPause.activeInHierarchy && Time.timeScale == 1)
+        //{
+        //    Time.timeScale = 0;
+        //}
+        //else if (CanvasRestart.activeInHierarchy && Time.timeScale == 1)
+        //{
+        //    Time.timeScale = 0;
+        //}
+        //else if (CanvasRestart.activeInHierarchy && Time.timeScale == 0)
+        //{
+        //    Time.timeScale = 1;
+        //}
     }
 
     private void PlayWinSound()
@@ -135,6 +136,7 @@ public class UIManager : MonoBehaviour
 
     public void PauseGame()
     {
+        Time.timeScale = 0;
         print("UICanvas Pause Game");
         CanvasPause.SetActive(true);
         CanvasRestart.SetActive(false);
@@ -143,6 +145,7 @@ public class UIManager : MonoBehaviour
 
     public void ResumeGame()
     {
+        Time.timeScale = 1;
         print("UI Canvas Resume Game");
         CanvasPause.SetActive(false);
         CanvasRestart.SetActive(false);

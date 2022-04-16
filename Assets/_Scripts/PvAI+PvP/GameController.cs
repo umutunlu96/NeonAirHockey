@@ -6,7 +6,7 @@ public class GameController : MonoBehaviour
 {
     private float gameDuration;
 
-    private bool gameEnd = false;
+    public bool gameEnd = false;
     private bool isEscape = false;
 
     private ScoreScript scoreScript;
@@ -63,7 +63,6 @@ public class GameController : MonoBehaviour
         if (!gameEnd)
         {
             gameDuration -= Time.deltaTime;
-            print(gameDuration);
         }
         if (!gameEnd && gameDuration <= 0)
         {
