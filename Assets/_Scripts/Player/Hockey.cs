@@ -190,10 +190,13 @@ public class Hockey : MonoBehaviour
         if (target.tag == "Finish")
         {
             SoundManager.instance.PlaySoundFX(finishHit, .2f);
-            Vibration.Vibrate(vibrationLong);
+
             rigidBody.velocity = new Vector2(0, 0);
             currentState = BallState.Finish;
             target.tag = "Untagged";
+            if(!EffectManager.instance.isNotVibrating)
+                Vibration.Vibrate(vibrationLong);
+
             gamaManager.CheckFinishState();
             //Win game UI
         }
@@ -201,7 +204,7 @@ public class Hockey : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (isVibrating)
+        if (!EffectManager.instance.isNotVibrating)
         {
             Vibration.Vibrate(vibrationLong);
         }
