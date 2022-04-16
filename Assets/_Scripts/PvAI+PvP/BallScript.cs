@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
 
-public class BallScript : MonoBehaviour, IResettable
+public class BallScript : MonoBehaviour
 {
     private ScoreScript ScoreScriptInstance;
     public static bool isGoal { get; private set; }
@@ -25,20 +25,34 @@ public class BallScript : MonoBehaviour, IResettable
     [SerializeField] private GameObject blueParticleSystem;
     [SerializeField] private GameObject yellowParticleSystem;
 
+
+    [SerializeField]private float particleDelay = .5f;
+    private float particleTime;
+    private bool canSpawnParticle = false;
+
     void Start()
     {
-        UIManager.Instance.ResetableGameObjects.Add(this);
         rigidBody = GetComponent<Rigidbody2D>();
         ScoreScriptInstance = GameObject.Find("GameManager").GetComponent<ScoreScript>();
         isVibrating = PlayerPrefs.GetInt("Vibrate", 1) == 0;
         isGoal = false;
+        particleTime = 0;
+    }
+
+    private void Update()
+    {
+        if (!canSpawnParticle)
+        {
+            particleTime += Time.deltaTime;
+            if (particleTime >= particleDelay)
+                canSpawnParticle = true;
+        }
     }
 
     private void FixedUpdate()
     {
         rigidBody.velocity = Vector2.ClampMagnitude(rigidBody.velocity, maxSpeed);
     }
-
 
     private void OnTriggerEnter2D(Collider2D target)
     {
@@ -51,8 +65,12 @@ public class BallScript : MonoBehaviour, IResettable
                 StartCoroutine(ResetBall(false));
                 SoundManager.instance.PlaySoundFX(goal, .5f);
                 
-                if(isVibrating)
+
+                if (EffectManager.instance.isNotVibrating)
+                {
                     Vibration.Vibrate(vibrationLong);
+                    print("Vibrate");
+                }
             }
 
             else if (target.tag == "PlayerGoal")
@@ -61,9 +79,12 @@ public class BallScript : MonoBehaviour, IResettable
                 isGoal = true;
                 StartCoroutine(ResetBall(true));
                 SoundManager.instance.PlaySoundFX(goal, .5f);
-                    
-                if(isVibrating)
+
+                if (!EffectManager.instance.isNotVibrating)
+                {
                     Vibration.Vibrate(vibrationLong);
+                    print("Vibrate");
+                }
             }
         }
     }
@@ -104,39 +125,49 @@ public class BallScript : MonoBehaviour, IResettable
                 break;
         }
 
-        if (target.transform.position.x <= -4)
+        if (target.transform.position.x <= -4 && canSpawnParticle)
         {
             Vector3 insPosX = new Vector3(target.transform.position.x, transform.position.y, 1);
             GameObject particle = Instantiate(particleSys, insPosX, Quaternion.Euler(new Vector3(0, 0, -90)));
             particle.GetComponent<ParticleSystem>().Play();
+            canSpawnParticle = false;
+            particleTime = 0;
         }
 
-        else if (target.transform.position.x >= 4)
+        else if (target.transform.position.x >= 4 && canSpawnParticle)
         {
             Vector3 insPosX = new Vector3(target.transform.position.x, transform.position.y, 1);
             GameObject particle = Instantiate(particleSys, insPosX, Quaternion.Euler(new Vector3(0, 0, 90)));
             particle.GetComponent<ParticleSystem>().Play();
+            canSpawnParticle = false;
+            particleTime = 0;
         }
 
-        else if (target.transform.position.y <= -7)
+        else if (target.transform.position.y <= -7 && canSpawnParticle)
         {
             Vector3 insPosY = new Vector3(transform.position.x, target.transform.position.y, 1);
             GameObject particle2 = Instantiate(particleSys, insPosY, Quaternion.identity);
             particle2.GetComponent<ParticleSystem>().Play();
+            canSpawnParticle = false;
+            particleTime = 0;
         }
 
-        else if (target.transform.position.y >= 7)
+        else if (target.transform.position.y >= 7 && canSpawnParticle)
         {
             Vector3 insPosY = new Vector3(transform.position.x, target.transform.position.y, 1);
             GameObject particle2 = Instantiate(particleSys, insPosY, Quaternion.Euler(new Vector3(0, 0, 180)));
             particle2.GetComponent<ParticleSystem>().Play();
+            canSpawnParticle = false;
+            particleTime = 0;
         }
 
-        else
+        else if(canSpawnParticle)
         {
             Vector3 insPosY = new Vector3(transform.position.x, transform.position.y, 1);
             GameObject particle2 = Instantiate(particleSys, insPosY, Quaternion.identity);
             particle2.GetComponent<ParticleSystem>().Play();
+            canSpawnParticle = false;
+            particleTime = 0;
         }
 
         #endregion
@@ -198,18 +229,6 @@ public class BallScript : MonoBehaviour, IResettable
         }
 
         #endregion
-
-        if (target.gameObject.tag == "PlayerGoal")
-        {
-            Vibration.Vibrate(vibrationLong);
-            rigidBody.velocity = new Vector2(0, 0);
-        }
-
-        if (target.gameObject.tag == "AiGoal")
-        {
-            Vibration.Vibrate(vibrationLong);
-            rigidBody.velocity = new Vector2(0, 0);
-        }
     }
 
     private void SetColor(int Index)
@@ -239,11 +258,5 @@ public class BallScript : MonoBehaviour, IResettable
             rigidBody.position = new Vector2(0, -1);
         else
             rigidBody.position = new Vector2(0, 1);
-    }
-
-    public void ResetPosition()
-    {
-        rigidBody.velocity = new Vector2(0, 0);
-        rigidBody.position = new Vector2(0, 0);
     }
 }

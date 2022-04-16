@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AiScript : MonoBehaviour, IResettable
+public class AiScript : MonoBehaviour
 {
     public float maxMovementSpeed;
     private Rigidbody2D rigidBody;
@@ -21,11 +21,8 @@ public class AiScript : MonoBehaviour, IResettable
     private bool canAiMove = false;
     private float offsetXFromTarget;
 
-
     void Start()
     {
-        UIManager.Instance.ResetableGameObjects.Add(this);
-
         rigidBody = GetComponent<Rigidbody2D>();
 
         startingPosition = rigidBody.position;
@@ -41,7 +38,6 @@ public class AiScript : MonoBehaviour, IResettable
                       ballBoundaryHolder.GetChild(1).position.y,
                       ballBoundaryHolder.GetChild(2).position.x,
                       ballBoundaryHolder.GetChild(3).position.x);
-
 
         //Difficulties
         switch (AiSettings.Difficulty)
@@ -85,17 +81,11 @@ public class AiScript : MonoBehaviour, IResettable
             rigidBody.MovePosition(Vector2.MoveTowards(rigidBody.position, targetPosition,
                                     movementSpeed * Time.fixedDeltaTime));
         }
-
     }
 
     IEnumerator delayAI()
     {
         yield return new WaitForSeconds(1);
         canAiMove = true;
-    }
-
-    public void ResetPosition()
-    {
-        rigidBody.position = startingPosition;
     }
 }

@@ -10,10 +10,11 @@ public class GameScaler : MonoBehaviour
     public GameObject hockey;
     public GameObject hockey2;
     public GameObject ball;
-
+    public GameObject ortaSaha;
 
     [SerializeField] private float hockeyOffset;
     [SerializeField] private float ballOffset;
+
     void Awake()
     {
         float screenRatioX = (float)Screen.width;
@@ -37,6 +38,9 @@ public class GameScaler : MonoBehaviour
 
             if (ball != null)
                 ball.transform.localScale = new Vector3(ballOffset + scaleFaxtor, ballOffset + scaleFaxtor, 1);
+
+            if (ortaSaha != null)
+                ortaSaha.transform.localScale = new Vector3(1, scaleFaxtor, 1);
         }
     }
 }

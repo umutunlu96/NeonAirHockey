@@ -16,8 +16,6 @@ public class UIManager : MonoBehaviour
 
     #endregion
 
-
-
     [Header("Canvas")]
     public GameObject CanvasGame;
     public GameObject CanvasRestart;
@@ -32,25 +30,18 @@ public class UIManager : MonoBehaviour
     public Image soundOff;
     public Image vibrateOff;
 
-
     [Header("Audio")]
     public AudioClip wonGame;
     public AudioClip loseGame;
     public AudioClip drawGame;
 
-    private ScoreScript scoreScript;
-    private GameController gameController;
-
-    public List<IResettable> ResetableGameObjects = new List<IResettable>();
-
     public object SceneManeger { get; private set; }
 
     private void Start()
     {
-        scoreScript = GameObject.FindObjectOfType<ScoreScript>();
-        gameController = GameObject.FindObjectOfType<GameController>();
-        soundOff.gameObject.SetActive(PlayerPrefs.GetInt("Muted") == 1);
+        soundOff.gameObject.SetActive(PlayerPrefs.GetInt("Muted", 1) == 1);
         vibrateOff.gameObject.SetActive(PlayerPrefs.GetInt("Vibrate", 1) == 1);
+        ResumeGame();
     }
 
     public void ShowRestartCanvas(float whoWin)
@@ -102,20 +93,7 @@ public class UIManager : MonoBehaviour
 
     public void RestartGame()
     {
-        ResumeGame();
-
-        print("UICanvas Restart Game");
-        PlayerPrefs.SetInt("PvPAdShowCount", PlayerPrefs.GetInt("PvPAdShowCount") + 1);
-
-        PvPAdManager.instance.AdCheck();
-
-        scoreScript.ResetScore();
-        gameController.ResetGame();
-
-        foreach (var obj in ResetableGameObjects)
-        {
-            obj.ResetPosition();
-        }
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void PauseGame()

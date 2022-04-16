@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour, IResettable
+public class PlayerMovement : MonoBehaviour
 {
     Rigidbody2D rigidBody;
 
@@ -40,15 +40,11 @@ public class PlayerMovement : MonoBehaviour, IResettable
     private void OnEnable()
     {
         playerController.Players.Add(this);
-
-        UIManager.Instance.ResetableGameObjects.Add(this);
     }
 
     private void OnDisable()
     {
-        playerController.Players.Remove(this);
-        
-        UIManager.Instance.ResetableGameObjects.Remove(this);
+        playerController.Players.Remove(this);   
     }
 
     public void MoveToPosition(Vector2 position)
@@ -57,11 +53,4 @@ public class PlayerMovement : MonoBehaviour, IResettable
                                       Mathf.Clamp(position.y, playerBoundary.Down, playerBoundary.Up));
         rigidBody.MovePosition(clampedMousePos);
     }
-
-    public void ResetPosition()
-    {
-        rigidBody.position = startingPosition;
-    }
-
-
 }

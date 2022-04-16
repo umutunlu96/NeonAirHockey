@@ -1203,7 +1203,7 @@ Transform:
   m_GameObject: {fileID: 296009401}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.0013117, z: 1}
   m_Children: []
   m_Father: {fileID: 189776038}
   m_RootOrder: 5
@@ -1973,6 +1973,7 @@ MonoBehaviour:
   hockey: {fileID: 8518825256380726238}
   hockey2: {fileID: 8518825257933946217}
   ball: {fileID: 2051878423}
+  ortaSaha: {fileID: 296009401}
   hockeyOffset: 1
   ballOffset: 0
 --- !u!1 &520203831
@@ -6600,6 +6601,7 @@ MonoBehaviour:
   greenParticleSystem: {fileID: 7133424829404630849, guid: a6b388e2d15a5ed4eb9f9850a4c20155, type: 3}
   blueParticleSystem: {fileID: 772904414395456499, guid: 32f170f1be59a96458ea261baba232cb, type: 3}
   yellowParticleSystem: {fileID: 9174231502608633905, guid: ba41e0a1d48375a48a787d08552487ca, type: 3}
+  particleDelay: 0.5
 --- !u!58 &2051878425
 CircleCollider2D:
   m_ObjectHideFlags: 0

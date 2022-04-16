@@ -69,17 +69,9 @@ public class GameController : MonoBehaviour
             gameEnd = true;
             print("GameController GameEnnd");
             UIManager.Instance.ShowRestartCanvas(CheckWhoWin());
-            PvPAdManager.instance.ShowAd();
         }
 
         CloseApplication();
-    }
-
-    public void ResetGame()
-    {
-        gameDuration = PlayerPrefs.GetInt("PvPTime") * 60;
-        print("GameController ResetGame");
-        gameEnd = false;
     }
 
     void CloseApplication()
@@ -88,7 +80,8 @@ public class GameController : MonoBehaviour
         {
             if (isEscape)
             {
-                Application.Quit();
+                //Application.Quit();
+                UIManager.Instance.ResumeGame();
             }
             else
             {
