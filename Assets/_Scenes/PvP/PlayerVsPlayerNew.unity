@@ -289,6 +289,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallRedGlowSmall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7039713414861853601, guid: 95dda4fe3c9a1f94099aad33f917b1e4, type: 3}
+      propertyPath: m_Size.x
+      value: 30.306515
+      objectReference: {fileID: 0}
+    - target: {fileID: 7039713414861853601, guid: 95dda4fe3c9a1f94099aad33f917b1e4, type: 3}
+      propertyPath: m_Size.y
+      value: 17.671795
+      objectReference: {fileID: 0}
+    - target: {fileID: 7039713414861853601, guid: 95dda4fe3c9a1f94099aad33f917b1e4, type: 3}
+      propertyPath: m_Offset.x
+      value: -14.985224
+      objectReference: {fileID: 0}
+    - target: {fileID: 7039713414861853601, guid: 95dda4fe3c9a1f94099aad33f917b1e4, type: 3}
+      propertyPath: m_Offset.y
+      value: -7.4497604
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95dda4fe3c9a1f94099aad33f917b1e4, type: 3}
 --- !u!4 &102637519 stripped
@@ -306,6 +322,22 @@ PrefabInstance:
     - target: {fileID: 5039679897053424732, guid: 74f3312b53c1aed498eca9b81ee49c50, type: 3}
       propertyPath: m_Name
       value: WallGreenGlowSmall (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039679897053424733, guid: 74f3312b53c1aed498eca9b81ee49c50, type: 3}
+      propertyPath: m_Size.x
+      value: 47.978035
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039679897053424733, guid: 74f3312b53c1aed498eca9b81ee49c50, type: 3}
+      propertyPath: m_Size.y
+      value: 30.778028
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039679897053424733, guid: 74f3312b53c1aed498eca9b81ee49c50, type: 3}
+      propertyPath: m_Offset.x
+      value: -23.820984
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039679897053424733, guid: 74f3312b53c1aed498eca9b81ee49c50, type: 3}
+      propertyPath: m_Offset.y
+      value: -14.002877
       objectReference: {fileID: 0}
     - target: {fileID: 5039679897053424735, guid: 74f3312b53c1aed498eca9b81ee49c50, type: 3}
       propertyPath: m_RootOrder
@@ -375,6 +407,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 381110430}
     m_Modifications:
+    - target: {fileID: 4526572645776385105, guid: 9631ba8a8e73ffc439c4e6bd1f6f1af8, type: 3}
+      propertyPath: m_Size.x
+      value: 47.42736
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526572645776385105, guid: 9631ba8a8e73ffc439c4e6bd1f6f1af8, type: 3}
+      propertyPath: m_Size.y
+      value: 23.05231
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526572645776385105, guid: 9631ba8a8e73ffc439c4e6bd1f6f1af8, type: 3}
+      propertyPath: m_Offset.x
+      value: -23.545647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526572645776385105, guid: 9631ba8a8e73ffc439c4e6bd1f6f1af8, type: 3}
+      propertyPath: m_Offset.y
+      value: -10.140018
+      objectReference: {fileID: 0}
     - target: {fileID: 4526572645776385106, guid: 9631ba8a8e73ffc439c4e6bd1f6f1af8, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -477,6 +525,22 @@ PrefabInstance:
     - target: {fileID: 5039679897053424732, guid: 74f3312b53c1aed498eca9b81ee49c50, type: 3}
       propertyPath: m_Name
       value: WallGreenGlowSmall
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039679897053424733, guid: 74f3312b53c1aed498eca9b81ee49c50, type: 3}
+      propertyPath: m_Size.x
+      value: 36.559357
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039679897053424733, guid: 74f3312b53c1aed498eca9b81ee49c50, type: 3}
+      propertyPath: m_Size.y
+      value: 44.090374
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039679897053424733, guid: 74f3312b53c1aed498eca9b81ee49c50, type: 3}
+      propertyPath: m_Offset.x
+      value: -18.111645
+      objectReference: {fileID: 0}
+    - target: {fileID: 5039679897053424733, guid: 74f3312b53c1aed498eca9b81ee49c50, type: 3}
+      propertyPath: m_Offset.y
+      value: -20.659052
       objectReference: {fileID: 0}
     - target: {fileID: 5039679897053424735, guid: 74f3312b53c1aed498eca9b81ee49c50, type: 3}
       propertyPath: m_RootOrder
@@ -630,7 +694,7 @@ Transform:
   m_GameObject: {fileID: 189776037}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8205128, y: 1, z: 1}
+  m_LocalScale: {x: 1.7573435, y: 1, z: 1}
   m_Children:
   - {fileID: 24817383}
   - {fileID: 1770662254}
@@ -685,7 +749,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -7.5897856, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -696,7 +760,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 16.179571, y: 1}
   m_EdgeRadius: 0
 --- !u!4 &190996749 stripped
 Transform:
@@ -795,6 +859,14 @@ PrefabInstance:
     - target: {fileID: 6884957796328002900, guid: 0c059506b63e04f4aa3e3dfd34ea30f0, type: 3}
       propertyPath: m_Name
       value: WallBlueGlow
+      objectReference: {fileID: 0}
+    - target: {fileID: 6884957796328002905, guid: 0c059506b63e04f4aa3e3dfd34ea30f0, type: 3}
+      propertyPath: m_Size.x
+      value: 22.833578
+      objectReference: {fileID: 0}
+    - target: {fileID: 6884957796328002905, guid: 0c059506b63e04f4aa3e3dfd34ea30f0, type: 3}
+      propertyPath: m_Offset.x
+      value: -11.416789
       objectReference: {fileID: 0}
     - target: {fileID: 6884957796328002906, guid: 0c059506b63e04f4aa3e3dfd34ea30f0, type: 3}
       propertyPath: m_RootOrder
@@ -923,7 +995,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &260999937
 Transform:
   m_ObjectHideFlags: 0
@@ -969,7 +1041,7 @@ Transform:
   m_GameObject: {fileID: 296009401}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.8205128, z: 1}
+  m_LocalScale: {x: 1, y: 1.7573435, z: 1}
   m_Children: []
   m_Father: {fileID: 189776038}
   m_RootOrder: 4
@@ -1089,7 +1161,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -13.345712, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1100,7 +1172,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 27.691423, y: 1}
   m_EdgeRadius: 0
 --- !u!4 &367041020 stripped
 Transform:
@@ -1166,6 +1238,14 @@ PrefabInstance:
     - target: {fileID: 3003451261379967817, guid: e0c6f57de7e5e454582c9388e6a218b0, type: 3}
       propertyPath: m_Name
       value: 'WallBlueGlow  '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8938735791577805514, guid: e0c6f57de7e5e454582c9388e6a218b0, type: 3}
+      propertyPath: m_Size.x
+      value: 18.120573
+      objectReference: {fileID: 0}
+    - target: {fileID: 8938735791577805514, guid: e0c6f57de7e5e454582c9388e6a218b0, type: 3}
+      propertyPath: m_Offset.x
+      value: -9.0602865
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0c6f57de7e5e454582c9388e6a218b0, type: 3}
@@ -1253,7 +1333,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 10.3735485, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1264,7 +1344,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 21.747097, y: 1}
   m_EdgeRadius: 0
 --- !u!1001 &381584703
 PrefabInstance:
@@ -1316,6 +1396,14 @@ PrefabInstance:
     - target: {fileID: 3701921963274144692, guid: af87ffdb75d5ea44bb17bb2414ea1e58, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3701921963274144694, guid: af87ffdb75d5ea44bb17bb2414ea1e58, type: 3}
+      propertyPath: m_Size.x
+      value: 41.435844
+      objectReference: {fileID: 0}
+    - target: {fileID: 3701921963274144694, guid: af87ffdb75d5ea44bb17bb2414ea1e58, type: 3}
+      propertyPath: m_Offset.x
+      value: -20.717922
       objectReference: {fileID: 0}
     - target: {fileID: 3701921963274144695, guid: af87ffdb75d5ea44bb17bb2414ea1e58, type: 3}
       propertyPath: m_Name
@@ -1440,6 +1528,14 @@ PrefabInstance:
     - target: {fileID: 4058642120812847216, guid: 510b6ddfd0f70e34d93dfd64b60127ee, type: 3}
       propertyPath: m_Name
       value: WallYellowGlow
+      objectReference: {fileID: 0}
+    - target: {fileID: 4058642120812847217, guid: 510b6ddfd0f70e34d93dfd64b60127ee, type: 3}
+      propertyPath: m_Size.x
+      value: 61.78687
+      objectReference: {fileID: 0}
+    - target: {fileID: 4058642120812847217, guid: 510b6ddfd0f70e34d93dfd64b60127ee, type: 3}
+      propertyPath: m_Offset.x
+      value: -30.893435
       objectReference: {fileID: 0}
     - target: {fileID: 4058642120812847223, guid: 510b6ddfd0f70e34d93dfd64b60127ee, type: 3}
       propertyPath: m_RootOrder
@@ -1781,6 +1877,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5025521623820826582, guid: 4efe2d31b8a34ea48986a1de28e5724a, type: 3}
+      propertyPath: m_Size.x
+      value: 47.53275
+      objectReference: {fileID: 0}
+    - target: {fileID: 5025521623820826582, guid: 4efe2d31b8a34ea48986a1de28e5724a, type: 3}
+      propertyPath: m_Size.y
+      value: 15.010311
+      objectReference: {fileID: 0}
+    - target: {fileID: 5025521623820826582, guid: 4efe2d31b8a34ea48986a1de28e5724a, type: 3}
+      propertyPath: m_Offset.x
+      value: -23.670408
+      objectReference: {fileID: 0}
+    - target: {fileID: 5025521623820826582, guid: 4efe2d31b8a34ea48986a1de28e5724a, type: 3}
+      propertyPath: m_Offset.y
+      value: 6.275403
+      objectReference: {fileID: 0}
     - target: {fileID: 5025521623820826583, guid: 4efe2d31b8a34ea48986a1de28e5724a, type: 3}
       propertyPath: m_Name
       value: WallGreenGlowSmall (1)
@@ -1802,7 +1914,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &547698255
 Transform:
   m_ObjectHideFlags: 0
@@ -2189,7 +2301,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &681454155
 Transform:
   m_ObjectHideFlags: 0
@@ -2265,6 +2377,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7639622252495822190, guid: ad971cf5330debc47ba40f27205d755e, type: 3}
+      propertyPath: m_Size.x
+      value: 13.6390915
+      objectReference: {fileID: 0}
+    - target: {fileID: 7639622252495822190, guid: ad971cf5330debc47ba40f27205d755e, type: 3}
+      propertyPath: m_Offset.x
+      value: -6.8195457
+      objectReference: {fileID: 0}
     - target: {fileID: 7639622252495822191, guid: ad971cf5330debc47ba40f27205d755e, type: 3}
       propertyPath: m_Name
       value: WallYellowGlow
@@ -2278,6 +2398,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 681454155}
     m_Modifications:
+    - target: {fileID: 4526572645776385105, guid: 9631ba8a8e73ffc439c4e6bd1f6f1af8, type: 3}
+      propertyPath: m_Size.x
+      value: 35.286964
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526572645776385105, guid: 9631ba8a8e73ffc439c4e6bd1f6f1af8, type: 3}
+      propertyPath: m_Size.y
+      value: 21.2713
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526572645776385105, guid: 9631ba8a8e73ffc439c4e6bd1f6f1af8, type: 3}
+      propertyPath: m_Offset.x
+      value: -17.475449
+      objectReference: {fileID: 0}
+    - target: {fileID: 4526572645776385105, guid: 9631ba8a8e73ffc439c4e6bd1f6f1af8, type: 3}
+      propertyPath: m_Offset.y
+      value: -9.249513
+      objectReference: {fileID: 0}
     - target: {fileID: 4526572645776385106, guid: 9631ba8a8e73ffc439c4e6bd1f6f1af8, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2899,6 +3035,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallGreenGlow  (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5689049916977268853, guid: bd382d558b5047c40b2046855a02fd7c, type: 3}
+      propertyPath: m_Size.x
+      value: 12.478696
+      objectReference: {fileID: 0}
+    - target: {fileID: 5689049916977268853, guid: bd382d558b5047c40b2046855a02fd7c, type: 3}
+      propertyPath: m_Offset.x
+      value: -6.239348
+      objectReference: {fileID: 0}
     - target: {fileID: 5689049916977268855, guid: bd382d558b5047c40b2046855a02fd7c, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -3144,6 +3288,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3831599599135168251, guid: cc78297278140cf4598c7180ca45cc50, type: 3}
+      propertyPath: m_Size.x
+      value: 13.994583
+      objectReference: {fileID: 0}
+    - target: {fileID: 3831599599135168251, guid: cc78297278140cf4598c7180ca45cc50, type: 3}
+      propertyPath: m_Offset.x
+      value: -6.9972916
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc78297278140cf4598c7180ca45cc50, type: 3}
 --- !u!1001 &927175288
@@ -3153,6 +3305,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 547698255}
     m_Modifications:
+    - target: {fileID: 1764322554531049397, guid: 9157d7e153d66ae48ac47fad6613fe38, type: 3}
+      propertyPath: m_Size.x
+      value: 36.33445
+      objectReference: {fileID: 0}
+    - target: {fileID: 1764322554531049397, guid: 9157d7e153d66ae48ac47fad6613fe38, type: 3}
+      propertyPath: m_Size.y
+      value: 10.448487
+      objectReference: {fileID: 0}
+    - target: {fileID: 1764322554531049397, guid: 9157d7e153d66ae48ac47fad6613fe38, type: 3}
+      propertyPath: m_Offset.x
+      value: -18.071259
+      objectReference: {fileID: 0}
+    - target: {fileID: 1764322554531049397, guid: 9157d7e153d66ae48ac47fad6613fe38, type: 3}
+      propertyPath: m_Offset.y
+      value: 3.9944901
+      objectReference: {fileID: 0}
     - target: {fileID: 1764322554531049399, guid: 9157d7e153d66ae48ac47fad6613fe38, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -3286,6 +3454,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 260999937}
     m_Modifications:
+    - target: {fileID: 7223241056593631224, guid: e3c484b7ba8b5344f9a87a67757163d3, type: 3}
+      propertyPath: m_Size.x
+      value: 38.50778
+      objectReference: {fileID: 0}
+    - target: {fileID: 7223241056593631224, guid: e3c484b7ba8b5344f9a87a67757163d3, type: 3}
+      propertyPath: m_Size.y
+      value: 39.630875
+      objectReference: {fileID: 0}
+    - target: {fileID: 7223241056593631224, guid: e3c484b7ba8b5344f9a87a67757163d3, type: 3}
+      propertyPath: m_Offset.x
+      value: -19.085855
+      objectReference: {fileID: 0}
+    - target: {fileID: 7223241056593631224, guid: e3c484b7ba8b5344f9a87a67757163d3, type: 3}
+      propertyPath: m_Offset.y
+      value: -18.429302
+      objectReference: {fileID: 0}
     - target: {fileID: 7223241056593631225, guid: e3c484b7ba8b5344f9a87a67757163d3, type: 3}
       propertyPath: m_Name
       value: WallYellowGlowSmall
@@ -3504,6 +3688,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6243639890502199804, guid: dfdb2ebdcf67fac41943ee4f4d0af4d8, type: 3}
+      propertyPath: m_Size.x
+      value: 23.255821
+      objectReference: {fileID: 0}
+    - target: {fileID: 6243639890502199804, guid: dfdb2ebdcf67fac41943ee4f4d0af4d8, type: 3}
+      propertyPath: m_Offset.x
+      value: -11.627911
+      objectReference: {fileID: 0}
     - target: {fileID: 6243639890502199807, guid: dfdb2ebdcf67fac41943ee4f4d0af4d8, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -3609,6 +3801,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallRedGlowSmall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7039713414861853601, guid: 95dda4fe3c9a1f94099aad33f917b1e4, type: 3}
+      propertyPath: m_Size.x
+      value: 43.560738
+      objectReference: {fileID: 0}
+    - target: {fileID: 7039713414861853601, guid: 95dda4fe3c9a1f94099aad33f917b1e4, type: 3}
+      propertyPath: m_Size.y
+      value: 21.01048
+      objectReference: {fileID: 0}
+    - target: {fileID: 7039713414861853601, guid: 95dda4fe3c9a1f94099aad33f917b1e4, type: 3}
+      propertyPath: m_Offset.x
+      value: -21.612335
+      objectReference: {fileID: 0}
+    - target: {fileID: 7039713414861853601, guid: 95dda4fe3c9a1f94099aad33f917b1e4, type: 3}
+      propertyPath: m_Offset.y
+      value: -9.119103
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95dda4fe3c9a1f94099aad33f917b1e4, type: 3}
 --- !u!114 &1042626981 stripped
@@ -3709,6 +3917,22 @@ PrefabInstance:
     - target: {fileID: 532991656493244005, guid: 46bc0350ddd0a7542b1c1b046fbfd561, type: 3}
       propertyPath: m_Name
       value: WallBlueGlowSmall
+      objectReference: {fileID: 0}
+    - target: {fileID: 532991656493244008, guid: 46bc0350ddd0a7542b1c1b046fbfd561, type: 3}
+      propertyPath: m_Size.x
+      value: 47.198338
+      objectReference: {fileID: 0}
+    - target: {fileID: 532991656493244008, guid: 46bc0350ddd0a7542b1c1b046fbfd561, type: 3}
+      propertyPath: m_Size.y
+      value: 22.561937
+      objectReference: {fileID: 0}
+    - target: {fileID: 532991656493244008, guid: 46bc0350ddd0a7542b1c1b046fbfd561, type: 3}
+      propertyPath: m_Offset.x
+      value: -23.503202
+      objectReference: {fileID: 0}
+    - target: {fileID: 532991656493244008, guid: 46bc0350ddd0a7542b1c1b046fbfd561, type: 3}
+      propertyPath: m_Offset.y
+      value: 10.051215
       objectReference: {fileID: 0}
     - target: {fileID: 532991656493244011, guid: 46bc0350ddd0a7542b1c1b046fbfd561, type: 3}
       propertyPath: m_RootOrder
@@ -3823,6 +4047,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7614529675560401002, guid: 18b6d41fc3a894848b1eb02ac1efa758, type: 3}
+      propertyPath: m_Size.x
+      value: 13.917746
+      objectReference: {fileID: 0}
+    - target: {fileID: 7614529675560401002, guid: 18b6d41fc3a894848b1eb02ac1efa758, type: 3}
+      propertyPath: m_Offset.x
+      value: -6.958873
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18b6d41fc3a894848b1eb02ac1efa758, type: 3}
 --- !u!1001 &1131118022
@@ -3880,6 +4112,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4191756433432478674, guid: b87b161c8e55085469757a1ea39faf4b, type: 3}
+      propertyPath: m_Size.x
+      value: 40.777256
+      objectReference: {fileID: 0}
+    - target: {fileID: 4191756433432478674, guid: b87b161c8e55085469757a1ea39faf4b, type: 3}
+      propertyPath: m_Offset.x
+      value: -20.388628
+      objectReference: {fileID: 0}
     - target: {fileID: 4191756433432478685, guid: b87b161c8e55085469757a1ea39faf4b, type: 3}
       propertyPath: m_Name
       value: WallRedGlow (1)
@@ -3893,6 +4133,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 660745760}
     m_Modifications:
+    - target: {fileID: 3223517509246620720, guid: dd5daa193dc2b17418d7389a0117716e, type: 3}
+      propertyPath: m_Size.x
+      value: 44.339977
+      objectReference: {fileID: 0}
+    - target: {fileID: 3223517509246620720, guid: dd5daa193dc2b17418d7389a0117716e, type: 3}
+      propertyPath: m_Size.y
+      value: 10.362792
+      objectReference: {fileID: 0}
+    - target: {fileID: 3223517509246620720, guid: dd5daa193dc2b17418d7389a0117716e, type: 3}
+      propertyPath: m_Offset.x
+      value: -22.074018
+      objectReference: {fileID: 0}
+    - target: {fileID: 3223517509246620720, guid: dd5daa193dc2b17418d7389a0117716e, type: 3}
+      propertyPath: m_Offset.y
+      value: 3.9516435
+      objectReference: {fileID: 0}
     - target: {fileID: 3223517509246620721, guid: dd5daa193dc2b17418d7389a0117716e, type: 3}
       propertyPath: m_Name
       value: WallYellowGlowSmall
@@ -3959,6 +4215,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 660745760}
     m_Modifications:
+    - target: {fileID: 7223241056593631224, guid: e3c484b7ba8b5344f9a87a67757163d3, type: 3}
+      propertyPath: m_Size.x
+      value: 47.09861
+      objectReference: {fileID: 0}
+    - target: {fileID: 7223241056593631224, guid: e3c484b7ba8b5344f9a87a67757163d3, type: 3}
+      propertyPath: m_Size.y
+      value: 12.992068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7223241056593631224, guid: e3c484b7ba8b5344f9a87a67757163d3, type: 3}
+      propertyPath: m_Offset.x
+      value: -23.381271
+      objectReference: {fileID: 0}
+    - target: {fileID: 7223241056593631224, guid: e3c484b7ba8b5344f9a87a67757163d3, type: 3}
+      propertyPath: m_Offset.y
+      value: -5.109897
+      objectReference: {fileID: 0}
     - target: {fileID: 7223241056593631225, guid: e3c484b7ba8b5344f9a87a67757163d3, type: 3}
       propertyPath: m_Name
       value: WallYellowGlowSmall (1)
@@ -4255,6 +4527,14 @@ PrefabInstance:
       value: 'WallBlueGlow '
       objectReference: {fileID: 0}
     - target: {fileID: 2712755413673716969, guid: d9a9b51dfca7722429cb5dd0b46799ad, type: 3}
+      propertyPath: m_Size.x
+      value: 21.108892
+      objectReference: {fileID: 0}
+    - target: {fileID: 2712755413673716969, guid: d9a9b51dfca7722429cb5dd0b46799ad, type: 3}
+      propertyPath: m_Offset.x
+      value: -10.554446
+      objectReference: {fileID: 0}
+    - target: {fileID: 2712755413673716969, guid: d9a9b51dfca7722429cb5dd0b46799ad, type: 3}
       propertyPath: m_EdgeRadius
       value: 0
       objectReference: {fileID: 0}
@@ -4510,7 +4790,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1466894562
 Transform:
   m_ObjectHideFlags: 0
@@ -4790,6 +5070,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5018165757770418571, guid: 0bebd5e5edc2e3843ab090ac2a4e9d93, type: 3}
+      propertyPath: m_Size.x
+      value: 61.47396
+      objectReference: {fileID: 0}
+    - target: {fileID: 5018165757770418571, guid: 0bebd5e5edc2e3843ab090ac2a4e9d93, type: 3}
+      propertyPath: m_Offset.x
+      value: -30.73698
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bebd5e5edc2e3843ab090ac2a4e9d93, type: 3}
 --- !u!1001 &1561942000
@@ -4799,6 +5087,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1466894562}
     m_Modifications:
+    - target: {fileID: 1764322554531049397, guid: 9157d7e153d66ae48ac47fad6613fe38, type: 3}
+      propertyPath: m_Size.x
+      value: 46.951614
+      objectReference: {fileID: 0}
+    - target: {fileID: 1764322554531049397, guid: 9157d7e153d66ae48ac47fad6613fe38, type: 3}
+      propertyPath: m_Size.y
+      value: 20.724031
+      objectReference: {fileID: 0}
+    - target: {fileID: 1764322554531049397, guid: 9157d7e153d66ae48ac47fad6613fe38, type: 3}
+      propertyPath: m_Offset.x
+      value: -23.37984
+      objectReference: {fileID: 0}
+    - target: {fileID: 1764322554531049397, guid: 9157d7e153d66ae48ac47fad6613fe38, type: 3}
+      propertyPath: m_Offset.y
+      value: 9.132262
+      objectReference: {fileID: 0}
     - target: {fileID: 1764322554531049399, guid: 9157d7e153d66ae48ac47fad6613fe38, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -4968,6 +5272,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallGreenGlow (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1206445915818417479, guid: 9462446bf16134a4f9995c06f0924e71, type: 3}
+      propertyPath: m_Size.x
+      value: 23.164093
+      objectReference: {fileID: 0}
+    - target: {fileID: 1206445915818417479, guid: 9462446bf16134a4f9995c06f0924e71, type: 3}
+      propertyPath: m_Offset.x
+      value: -11.5820465
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9462446bf16134a4f9995c06f0924e71, type: 3}
 --- !u!1001 &1648658236
@@ -4980,6 +5292,22 @@ PrefabInstance:
     - target: {fileID: 532991656493244005, guid: 46bc0350ddd0a7542b1c1b046fbfd561, type: 3}
       propertyPath: m_Name
       value: WallBlueGlowSmall
+      objectReference: {fileID: 0}
+    - target: {fileID: 532991656493244008, guid: 46bc0350ddd0a7542b1c1b046fbfd561, type: 3}
+      propertyPath: m_Size.x
+      value: 28.460752
+      objectReference: {fileID: 0}
+    - target: {fileID: 532991656493244008, guid: 46bc0350ddd0a7542b1c1b046fbfd561, type: 3}
+      propertyPath: m_Size.y
+      value: 12.632553
+      objectReference: {fileID: 0}
+    - target: {fileID: 532991656493244008, guid: 46bc0350ddd0a7542b1c1b046fbfd561, type: 3}
+      propertyPath: m_Offset.x
+      value: -14.134408
+      objectReference: {fileID: 0}
+    - target: {fileID: 532991656493244008, guid: 46bc0350ddd0a7542b1c1b046fbfd561, type: 3}
+      propertyPath: m_Offset.y
+      value: 5.086523
       objectReference: {fileID: 0}
     - target: {fileID: 532991656493244011, guid: 46bc0350ddd0a7542b1c1b046fbfd561, type: 3}
       propertyPath: m_RootOrder
@@ -5551,6 +5879,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 660745760}
     m_Modifications:
+    - target: {fileID: 8955483700483980122, guid: e768068f0076faf42b0138b169dd0821, type: 3}
+      propertyPath: m_Size.x
+      value: 16.154024
+      objectReference: {fileID: 0}
+    - target: {fileID: 8955483700483980122, guid: e768068f0076faf42b0138b169dd0821, type: 3}
+      propertyPath: m_Offset.x
+      value: -8.077012
+      objectReference: {fileID: 0}
     - target: {fileID: 8955483700483980123, guid: e768068f0076faf42b0138b169dd0821, type: 3}
       propertyPath: m_Name
       value: WallYellowGlow (1)
@@ -5706,7 +6042,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 15.027146, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -5717,7 +6053,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 31.054293, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &1835555009
 GameObject:
@@ -5763,6 +6099,14 @@ PrefabInstance:
     - target: {fileID: 6166758030273822740, guid: 91c1e71bcec87db439454dfb34291dcd, type: 3}
       propertyPath: m_Name
       value: 'WallGreenGlow '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6166758030273822741, guid: 91c1e71bcec87db439454dfb34291dcd, type: 3}
+      propertyPath: m_Size.x
+      value: 47.442608
+      objectReference: {fileID: 0}
+    - target: {fileID: 6166758030273822741, guid: 91c1e71bcec87db439454dfb34291dcd, type: 3}
+      propertyPath: m_Offset.x
+      value: -23.721304
       objectReference: {fileID: 0}
     - target: {fileID: 6166758030273822743, guid: 91c1e71bcec87db439454dfb34291dcd, type: 3}
       propertyPath: m_RootOrder
@@ -5886,7 +6230,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1867213899}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.4728, y: 0, z: 0}
   m_LocalScale: {x: 12, y: 20, z: 1}
   m_Children: []
   m_Father: {fileID: 560835540}
@@ -6025,6 +6369,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 260999937}
     m_Modifications:
+    - target: {fileID: 3223517509246620720, guid: dd5daa193dc2b17418d7389a0117716e, type: 3}
+      propertyPath: m_Size.x
+      value: 39.198833
+      objectReference: {fileID: 0}
+    - target: {fileID: 3223517509246620720, guid: dd5daa193dc2b17418d7389a0117716e, type: 3}
+      propertyPath: m_Size.y
+      value: 15.961394
+      objectReference: {fileID: 0}
+    - target: {fileID: 3223517509246620720, guid: dd5daa193dc2b17418d7389a0117716e, type: 3}
+      propertyPath: m_Offset.x
+      value: -19.503447
+      objectReference: {fileID: 0}
+    - target: {fileID: 3223517509246620720, guid: dd5daa193dc2b17418d7389a0117716e, type: 3}
+      propertyPath: m_Offset.y
+      value: 6.7509437
+      objectReference: {fileID: 0}
     - target: {fileID: 3223517509246620721, guid: dd5daa193dc2b17418d7389a0117716e, type: 3}
       propertyPath: m_Name
       value: WallYellowGlowSmall (1)
@@ -6283,6 +6643,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallYellowGlow (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3865914758891283933, guid: cb0716491ac5bf7449ce90fddc33abcf, type: 3}
+      propertyPath: m_Size.x
+      value: 30.7294
+      objectReference: {fileID: 0}
+    - target: {fileID: 3865914758891283933, guid: cb0716491ac5bf7449ce90fddc33abcf, type: 3}
+      propertyPath: m_Offset.x
+      value: -15.3647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb0716491ac5bf7449ce90fddc33abcf, type: 3}
 --- !u!1 &2051878423
@@ -6330,6 +6698,7 @@ MonoBehaviour:
   greenParticleSystem: {fileID: 7133424829404630849, guid: a6b388e2d15a5ed4eb9f9850a4c20155, type: 3}
   blueParticleSystem: {fileID: 772904414395456499, guid: 32f170f1be59a96458ea261baba232cb, type: 3}
   yellowParticleSystem: {fileID: 9174231502608633905, guid: ba41e0a1d48375a48a787d08552487ca, type: 3}
+  particleDelay: 0.5
 --- !u!58 &2051878425
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6376,7 +6745,7 @@ Transform:
   m_GameObject: {fileID: 2051878423}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8205128, y: 0.8205128, z: 1}
+  m_LocalScale: {x: 1.7573435, y: 1.7573435, z: 1}
   m_Children:
   - {fileID: 520203832}
   m_Father: {fileID: 0}
@@ -6570,6 +6939,22 @@ PrefabInstance:
     - target: {fileID: 5025521623820826580, guid: 4efe2d31b8a34ea48986a1de28e5724a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5025521623820826582, guid: 4efe2d31b8a34ea48986a1de28e5724a, type: 3}
+      propertyPath: m_Size.x
+      value: 51.17879
+      objectReference: {fileID: 0}
+    - target: {fileID: 5025521623820826582, guid: 4efe2d31b8a34ea48986a1de28e5724a, type: 3}
+      propertyPath: m_Size.y
+      value: 23.446823
+      objectReference: {fileID: 0}
+    - target: {fileID: 5025521623820826582, guid: 4efe2d31b8a34ea48986a1de28e5724a, type: 3}
+      propertyPath: m_Offset.x
+      value: -25.493425
+      objectReference: {fileID: 0}
+    - target: {fileID: 5025521623820826582, guid: 4efe2d31b8a34ea48986a1de28e5724a, type: 3}
+      propertyPath: m_Offset.y
+      value: 10.493656
       objectReference: {fileID: 0}
     - target: {fileID: 5025521623820826583, guid: 4efe2d31b8a34ea48986a1de28e5724a, type: 3}
       propertyPath: m_Name
@@ -7265,7 +7650,7 @@ Transform:
   m_GameObject: {fileID: 8518825256380726238}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -5, z: 0}
-  m_LocalScale: {x: 1.8205128, y: 1.8205128, z: 1}
+  m_LocalScale: {x: 2.7573435, y: 2.7573435, z: 1}
   m_Children:
   - {fileID: 8518825257563220895}
   m_Father: {fileID: 0}
@@ -7640,7 +8025,7 @@ Transform:
   m_GameObject: {fileID: 8518825257933946217}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 5, z: 0}
-  m_LocalScale: {x: 1.8205128, y: 1.8205128, z: 1}
+  m_LocalScale: {x: 2.7573435, y: 2.7573435, z: 1}
   m_Children:
   - {fileID: 8518825255880076584}
   m_Father: {fileID: 0}
