@@ -37,6 +37,15 @@ public class PlayerMovement : MonoBehaviour
                                       BoundaryHolder.GetChild(3).position.x);
     }
 
+    private void Update()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            MoveToPosition(mousePos);
+        }
+    }
+
     private void OnEnable()
     {
         playerController.Players.Add(this);

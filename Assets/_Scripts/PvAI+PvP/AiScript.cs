@@ -20,6 +20,8 @@ public class AiScript : MonoBehaviour
     private bool isFirstTimeInOpponentsHalf = true;
     private bool canAiMove = false;
     private float offsetXFromTarget;
+    private float stuckCounter = 3;
+
 
     void Start()
     {

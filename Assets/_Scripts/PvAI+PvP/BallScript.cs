@@ -48,13 +48,13 @@ public class BallScript : MonoBehaviour
             if (particleTime >= particleDelay)
                 canSpawnParticle = true;
         }
-        print(rigidBody.velocity.magnitude);
+
         if (rigidBody.velocity.magnitude <= .1f && stuckCounter > 0)
         {
             stuckCounter -= Time.deltaTime;
             if (stuckCounter <= 0)
             {
-                rigidBody.position = new Vector2(0, 0);
+                //rigidBody.position = new Vector2(0, 0);
                 stuckCounter = 3;
             }
         }
