@@ -87,6 +87,93 @@ MonoBehaviour:
   - Language: Turkish
     Text: RENKLER
     Object: {fileID: 0}
+--- !u!1 &1787191237
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1787191238}
+  - component: {fileID: 1787191239}
+  m_Layer: 0
+  m_Name: Key_Carnival
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1787191238
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787191237}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5792409287293304515}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1787191239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787191237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: CARNIVAL
+    Object: {fileID: 0}
+  - Language: Turkish
+    Text: KARNAVAL
+    Object: {fileID: 0}
+  - Language: German
+    Text: KARNEVAL
+    Object: {fileID: 0}
+  - Language: Chinese
+    Text: "\u72C2\u6B22"
+    Object: {fileID: 0}
+  - Language: Hindi
+    Text: "\u0915\u093E\u0930\u094D\u0928\u093F\u0935\u093E\u0932"
+    Object: {fileID: 0}
+  - Language: Spanish
+    Text: CARNAVAL
+    Object: {fileID: 0}
+  - Language: French
+    Text: CARNAVAL
+    Object: {fileID: 0}
+  - Language: Arabic
+    Text: "\u0644\u0627\u0641\u0646\u0631\u0643"
+    Object: {fileID: 0}
+  - Language: Bengali
+    Text: "\u0995\u09BE\u09B0\u09CD\u09A8\u09BF\u09AD\u09BE\u09B2"
+    Object: {fileID: 0}
+  - Language: Russian
+    Text: "\u041A\u0410\u0420\u041D\u0410\u0412\u0410\u041B"
+    Object: {fileID: 0}
+  - Language: Portuguese
+    Text: CARNAVAL
+    Object: {fileID: 0}
+  - Language: Indonesian
+    Text: KARNAVAL
+    Object: {fileID: 0}
+  - Language: Japanese
+    Text: "\u30AB\u30FC\u30CB\u30D0\u30EB"
+    Object: {fileID: 0}
+  - Language: Korean
+    Text: "\uC0AC\uC721\uC81C"
+    Object: {fileID: 0}
 --- !u!1 &5792409286815988961
 GameObject:
   m_ObjectHideFlags: 0
@@ -920,6 +1007,7 @@ Transform:
   - {fileID: 5792409288608488478}
   - {fileID: 5792409288334494502}
   - {fileID: 747334291}
+  - {fileID: 1787191238}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -935,10 +1023,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 806f0696300aeac44a0e17efee222854, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentLanguage: Turkish
+  currentLanguage: English
   detectLanguage: 1
   defaultLanguage: English
-  saveLoad: 1
+  saveLoad: 0
   prefabs: []
 --- !u!1 &5792409287306509501
 GameObject:

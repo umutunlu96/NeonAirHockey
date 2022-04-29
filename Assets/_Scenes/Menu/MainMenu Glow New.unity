@@ -891,7 +891,7 @@ GameObject:
   - component: {fileID: 67735403}
   - component: {fileID: 67735402}
   m_Layer: 5
-  m_Name: Championship
+  m_Name: Carnival
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3758,7 +3758,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: OYUNCU VS BOT
+  m_Text: PLAYER VS BOT
 --- !u!222 &275480674
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6989,7 +6989,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: HAKKINDA
+  m_Text: ABOUT
 --- !u!222 &633275337
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11065,7 +11065,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: OYUNCU VS OYUNCU
+  m_Text: PLAYER VS PLAYER
 --- !u!222 &937029346
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11870,7 +11870,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: OYNA
+  m_Text: PLAY
 --- !u!222 &999709887
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18770,7 +18770,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: DAHA FAZLA UYGULAMA
+  m_Text: MORE APPS
 --- !u!222 &1622727628
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19782,7 +19782,7 @@ GameObject:
   - component: {fileID: 1721012842}
   - component: {fileID: 1721012844}
   m_Layer: 5
-  m_Name: ChampionshipButtonText
+  m_Name: CarnivalButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19840,7 +19840,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u015EAMP\u0130YONLUK"
+  m_Text: CARNIVAL
 --- !u!222 &1721012843
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19861,8 +19861,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  translationName: Key_Championship
-  FallbackText: CHAMPIONSHIP
+  translationName: Key_Carnival
+  FallbackText: CARNIVAL
 --- !u!1 &1727433877
 GameObject:
   m_ObjectHideFlags: 0
@@ -23431,14 +23431,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5792409287293304514, guid: 302ee6718ad4673479ef4649d3eaa60a, type: 3}
-      propertyPath: saveLoad
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5792409287293304514, guid: 302ee6718ad4673479ef4649d3eaa60a, type: 3}
-      propertyPath: currentLanguage
-      value: Turkish
-      objectReference: {fileID: 0}
     - target: {fileID: 5792409287293304515, guid: 302ee6718ad4673479ef4649d3eaa60a, type: 3}
       propertyPath: m_RootOrder
       value: 3

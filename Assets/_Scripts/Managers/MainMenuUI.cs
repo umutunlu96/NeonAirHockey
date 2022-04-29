@@ -61,12 +61,17 @@ public class MainMenuUI : MonoBehaviour
             SceneManager.LoadScene(PlayerPrefs.GetInt("Level", 1));
     }
 
+    public void PlayCanivalMode()
+    {
+        SceneManager.LoadScene("Carnival");
+        PlayerPrefs.SetInt("PvPAdShowCount", PlayerPrefs.GetInt("PvPAdShowCount") + 1);
+    }
+
     public void PlayPlayerVsPlayer()
     {
         SceneManager.LoadScene("PlayerVsPlayerNew");
         PlayerPrefs.SetInt("PvPAdShowCount", PlayerPrefs.GetInt("PvPAdShowCount") + 1);
     }
-
 
     public void PlayVsAi()
     {
